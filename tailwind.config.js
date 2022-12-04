@@ -29,7 +29,7 @@ module.exports = {
       },
       colors: {
         navBar: "#1d1e25",
-        primary: "#121316",
+        primary: "#000000",
         textBase: "#8f9091",
       },
     },

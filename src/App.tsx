@@ -19,7 +19,7 @@ function App() {
     <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
         <nav className="w-full px-6 z-50  fixed inset-x-0 top-2 flex justify-center items-center ">
           <div className=" w-full md:w-880 bg-navBar p-4 rounded-2xl flex items-center">
-            <p className="text-lg text-slate-200 font-medium">Osi Obomighie</p>
+            <p className="text-2xl text-slate-200 font-medium">Osi Obomighie</p>
 
             <div className="hidden md:flex items-center gap-6 ml-6 flex-1">
               <a
@@ -133,12 +133,17 @@ function App() {
         </div>
 
         <main className="w-[80%] mt-4">
+          <div className="flex flex-col items-center justify-center mb-3">
+            <h1 className="text-5xl font-bold text-center text-textBase">
+              Hi 👋 , I'm Osi Obomighie
+            </h1>
+          </div>
           <section
             className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-24"
             id="about"
           >
             <div className="w-full h-420 flex items-center justify-center">
-              <div className="w-275 h-340 relative bg-emerald-200 rounded-md">
+              <div className="w-275 h-340 relative bg-emerald-200 rounded-md mb-20">
                 <img
                   src={profile}
                   alt=""
@@ -146,15 +151,21 @@ function App() {
                 />
               </div>
             </div>
-            <div className="w-full h-420 flex flex-col items-center justify-center ">
+            <div className="w-full h-420 flex flex-col items-center justify-center mt-5">
               <p className="text-lg text-textBase text-center">
-                Currently an undergraduate at the University of Warwick studying Systems Engineering. I am passionate about technology and how it can be used to solve real world problems. 
-                I am also a keen learner and I am always looking to improve my skills and knowledge.
-                I enjoy using my skills to create projects and compete in hackathons, where I go to learn new skills and meet new people as well as win prizes
+                Currently an undergraduate at the University of Warwick studying Systems Engineering. I am passionate about technology and how it can be used to solve real world problems.
+              </p>
+              <p className="text-lg text-textBase text-center">
+                I am also a keen learner and I am always looking to learn new technologies.
+              </p>
+              <p className="text-lg text-textBase text-center">
+                I enjoy using my skills to create projects and compete in hackathons, I use them as an opportunity to learn new technologies and to work with new people and win some prizes along the way.
+              </p>
+              <p className="text-lg text-textBase text-center">
                 I hope to one day create a piece of technology that I saw in an anime and make it a reality.
               </p>
 
-              <button className="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
+              <button className="w-full md:w-auto h-400 relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
                 <span className="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0" >
                  <a href={pdf}
                   target="_blank"

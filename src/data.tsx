@@ -28,7 +28,7 @@ export const Experience = [
       date: "July 2023 - June 2024",
       iconsSrc: <IoCodeWorking />,
       company: "Hewlett Packard Enterprise",
-      title: "Incoming Software Engineer",
+      title: "Incoming Software Engineer Intern",
       location: "Bristol, UK",
       description:
         "Incoming Software Engineer Intern for Hewlett Packard Enterprise",
