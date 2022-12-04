@@ -164,6 +164,7 @@ function App() {
               </button>
             </div>
           </section>
+          
 
           <section id="experience" className="w-full flex items-center justify-center">
             <VerticalTimeline>
