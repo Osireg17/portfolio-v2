@@ -164,7 +164,7 @@ function App() {
               </button>
             </div>
           </section>
-          
+
 
           <section id="experience" className="w-full flex items-center justify-center">
             <VerticalTimeline>
@@ -240,7 +240,7 @@ function App() {
             id="contacts"
             className="flex flex-col items-center justify-evenly w-full my-24"
           >
-            <p className="text-2xl text-gray-400 capitalize">Contact Me</p>
+            <p className="text-2xl text-gray-400 capitalize">Social Links</p>
             <div className="flex items-center justify-evenly w-full my-4 flex-wrap gap-4">
               {SocialLinks &&
                 SocialLinks.map((n) => (
