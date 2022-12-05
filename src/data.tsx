@@ -17,7 +17,7 @@ import {SiExpress, SiOpencv, SiGraphql, SiMysql, SiTypescript} from 'react-icons
 //impot javascript from react-icons
 import img1 from './Portfolio_Images/CashCow.jpg'
 import img2 from './Portfolio_Images/NarutoNotions.jpg'
-import img3 from './Portfolio_Images/Wordle Clone.jpg'
+import img3 from './Portfolio_Images/Picture2.jpg'
 import img4 from './Portfolio_Images/Vivy.webp'
 import img5 from './Portfolio_Images/NBA.jpg'
 import img6 from './Portfolio_Images/Chat-App.webp'
@@ -81,33 +81,38 @@ export const Experience = [
       name: "Cash Cow",
       imageSrc: img1,
       techs: "Javascript, React, Geeko API", 
+      description: "A web application that allows users to keep track of various cryptocurrencies and their prices. The application uses the Geeko API to fetch the latest prices of the cryptocurrencies and then displays them in a table.",
       github: "https://github.com/Osireg17/CashCow",
     },
     {
       id: 2,
       name: "Naruto Notions",
       imageSrc: img2,
+      description: "full stack web application that allows users to create and share their own Naruto fan theories. The application uses the MERN stack and is hosted on Heroku.",
       techs: "Javascript, Node.js, Express, MongoDB, Bootstrap",
       github: "https://github.com/Osireg17/Naruto-Notions",
     },
     {
       id: 3,
-      name: "Wordle Clone",
+      name: "Robotic Arm",
       imageSrc: img3,
-      techs: "React, WordsAPI, Javascript",
-      github: "https://github.com/Osireg17/Wordle-Clone",
+      description: "Group project that involved the design and development of a robotic arm that can be controlled using a joystick. The arm was able to move in 6 different directions and was able to pick up and drop objects. ",
+      techs: "Arduino, C++, 3D Printing",
+      github: "https://github.com/Osireg17/ES2C6-Robotic-Arm-Project",
     },
     {
       id: 4,
       name: "Vivy Fluorite Eye's Song",
       imageSrc: img4,
+      description: "A chatbot that is based off the anime Vivy: Fluorite Eye's Song. The chatbot is able to answer questions about the anime and also has a personality that is based off the character Vivy.",
       techs: "Python, Flask, Tensorflow, Pytorch, Bootstrap",
-      github: "https://github.com/Osireg17/Sorting-Algorithm-Visualizer",
+      github: "https://github.com/Osireg17/AI-Chatbot",
     },
     {
       id: 5,
       name: "NBA Face Smash",
       imageSrc: img5,
+      description: "OpenCV project that estimates how much you look like a NBA player. The application uses OpenCV to detect the user's face and then uses a pre-trained model to estimate how much the user looks like the NBA player.",
       techs: "Python, OpenCV",
       github: "https://github.com/Osireg17/Facial-Recognition",
     },
@@ -115,6 +120,7 @@ export const Experience = [
       id: 6,
       name: "Chat Application",
       imageSrc: img6,
+      description:"Still in progress...",
       techs: "React, Node.Js, GraphQL, Typescript, MySQL",
       github: "https://github.com/Osireg17/Chat-Application",
     },

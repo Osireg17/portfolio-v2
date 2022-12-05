@@ -8,11 +8,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import profile from './images/profile.jpg'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import "react-vertical-timeline-component/style.min.css";
+import ReadMore from './ReadMore';
 
 
 
 function App() {
-
+  
   const [isActive, setIsActive] = useState(false)
   return (
     <AnimatePresence initial={false}>
@@ -230,6 +231,21 @@ function App() {
                     className="w-full h-full object-cover rounded-md my-4"
                     alt=""
                   />
+                  <p className="text-lg text-textBase">
+                  <ReadMore>
+                    {n.description}
+                  </ReadMore>
+                  </p>
+                  
+                
+                    {/* <p className="text-textBase text-sm">
+                      {n.description.length > 50
+                        ? `${n.description.slice(0, 50)}...`
+                        : n.description}
+                    </p> */}
+                
+
+                  
 
                   <div className="flex flex-1 items-center justify-between">
                     <p className="text-lg text-gray-300">
