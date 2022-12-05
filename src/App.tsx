@@ -125,6 +125,7 @@ function App() {
 
         <div className="w-screen h-screen flex flex-col items-center justify-center relative" id="home">
         <Spline scene="https://prod.spline.design/V8fVYCI-HhjhVe6E/scene.splinecode" />
+        
         {/* <Spline scene="https://prod.spline.design/8CNI2WaiKU8c-jxH/scene.splinecode" /> */}
         {/* <Spline scene="https://prod.spline.design/V8fVYCI-HhjhVe6E/scene.splinecode" /> */}
           <div className="absolute bottom-10 w-full flex justify-center items-center">
