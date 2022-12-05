@@ -136,7 +136,7 @@ function App() {
 
         <main className="w-[80%] mt-4">
           <div className="flex flex-col items-center justify-center mb-3">
-            <h1 className="text-5xl font-bold text-center text-textBase">
+            <h1 className="text-5xl font-bold text-center text-slate-200">
               Hi 👋 , I'm Osi Obomighie
             </h1>
           </div>
