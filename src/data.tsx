@@ -1,18 +1,9 @@
 import {
     IoCodeWorking,
     IoLogoGithub,
-    IoLogoYoutube,
-    IoLogoTwitter,
     IoLogoLinkedin,
-    IoLogoWhatsapp,
-    IoLogoJavascript,
-    IoLogoPython,
-    IoLogoReact,
-    IoLogoNodejs,
 } from "react-icons/io5";
-import {FaBootstrap} from 'react-icons/fa'
-import {DiMongodb} from 'react-icons/di'
-import {SiExpress, SiOpencv, SiGraphql, SiMysql, SiTypescript} from 'react-icons/si'
+
 
 //impot javascript from react-icons
 import img1 from './Portfolio_Images/CashCow.jpg'
