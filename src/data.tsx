@@ -12,6 +12,9 @@ import img3 from './Portfolio_Images/Picture2.jpg'
 import img4 from './Portfolio_Images/Vivy.webp'
 import img5 from './Portfolio_Images/NBA.jpg'
 import img6 from './Portfolio_Images/Chat-App.webp'
+import img7 from './Portfolio_Images/AC-Hack.webp'
+import img8 from './Portfolio_Images/Code-for-good.webp'
+import img9 from './Portfolio_Images/Kingdom-Code.jpg'
   
 export const Experience = [
     {
@@ -26,6 +29,17 @@ export const Experience = [
     },
     {
       id: 2,
+      date: "March 2023 - April 2023",
+      iconsSrc: <IoCodeWorking />,
+      company: "JP Morgan Chase",
+      title: "Incoming Software Engineer Intern",
+      location: "London, UK",
+      description:
+        "Incoming Software Engineer Intern for JP Morgan Chase Intro to tech program",
+
+    },
+    {
+      id: 3,
       date: "October 2022 - Present",
       iconsSrc: <IoCodeWorking />,
       company: "Butterfly",
@@ -35,7 +49,7 @@ export const Experience = [
         "I am currently working as a Software Engineer at Butterfly, a startup that is developing a social media platform for students to connect with each other and share their experiences. The app is currently only avaiable to Warwick University students but will be rolled out to other universities in the future."
     },
     {
-      id: 3,
+      id: 4,
       date: "July 2022 - August 2022",
       iconsSrc: <IoCodeWorking />,
       company: "Ford Motors",
@@ -45,7 +59,7 @@ export const Experience = [
         "I undertook a summer internship at Ford Motors where I worked with the rapid digital prototype team to develop a prototype for their In-Vehicle Entertainment Project. We built a working prototype of an arcade racing game using Unity and C#. The game is able to interact with the car's sensors and actuators, which is demoed using raspberry pi, arduino and websockets allowing the user to have the ultimate experience of racing the car.",
     },
     {
-      id: 4,
+      id: 5,
       date: "June 2022 - July 2022",
       iconsSrc: <IoCodeWorking />,
       company: "Lloyds Banking Group",
@@ -55,7 +69,7 @@ export const Experience = [
         "I undertook a spring week at Lloyds Banking Group, where I developed my knowledge on the Fintech industry. During, the spring week I used python to develop a program to analysis data of 12000 different simulated bank transactions and then presented any findings to a panel of Lloyds bank employees. I also worked in a group to develop a secure video chat application using the MERN stack which included 2 factor authentication using a random generated password.",
     },
     {
-      id: 5,
+      id: 6,
       date: "July 2021 - August 2021",
       iconsSrc: <IoCodeWorking />,
       company: "Leonardo",
@@ -115,6 +129,32 @@ export const Experience = [
       techs: "React, Node.Js, GraphQL, Typescript, MySQL",
       github: "https://github.com/Osireg17/Chat-Application",
     },
+  ];
+
+  export const Hackathons = [
+    {
+      id: 1,
+      name: "Imperial AC Hackathon",
+      imageSrc: img7,
+      description: "Competed in Imperial College London AC Hack, where I worked with other liked minded individuals to develop a web application that allows users to keep track of their mood and suggest activities that they can do to improve their mood during the day",
+      techs: "React, Apache, Python, Flask, Tensorflow, Pytorch ",
+      github: "",
+    },
+    {
+      id: 2,
+      name: "JP Morgan Code for Good Hackathon",
+      imageSrc: img8,
+      description: "Won the JP Morgan Code for Good Hackathon, where I worked with 4 other developers to develop a social media app to allow for deafblind people to have a more inclusive social media experience.",
+      techs: "Flutter, Firebase, Dart, Google API's",
+      github: "",
+    },
+    {
+      id: 3,
+      name: "Kingdom Code: Build Hackathon",
+      imageSrc: img9,
+      description: "1st place in Kingdom Code: Build. This christian hackathon was hosted so that we could create technical solutions to help charities which glorify God. I worked on a team that helped develop a web application that would help foodbanks organise their inventory and help them keep track of their donations.",
+      techs: "React, Typescript, GraphQL, Strapi, PostgreSQL",
+    }
   ];
   
   export const SocialLinks = [

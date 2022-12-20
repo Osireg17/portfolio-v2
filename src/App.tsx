@@ -3,16 +3,19 @@ import Spline from '@splinetool/react-spline';
 import pdf from './CV/Osiregbemhe.pdf'
 import {IoMenu, IoLogoGithub} from 'react-icons/io5'
 import {RxCrossCircled} from 'react-icons/rx'
-import { Experience, Projects, SocialLinks } from "./data";
+import { Experience, Projects, SocialLinks, Hackathons } from "./data";
 import { AnimatePresence, motion } from "framer-motion";
 import profile from './images/profile.jpg'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import "react-vertical-timeline-component/style.min.css";
 import ReadMore from './ReadMore';
+import Typewriter from 'typewriter-effect';
 
 
 
 function App() {
+
+  
   
   const [isActive, setIsActive] = useState(false)
   return (
@@ -42,6 +45,7 @@ function App() {
               >
                 Projects
               </a>
+              <a href="#hackathons" className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in">Hackathons</a>
               <a
                 href="#contacts"
                 className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
@@ -95,11 +99,9 @@ function App() {
                 >
                   Projects
                 </a>
-                <a
-                  href="#contacts"
-                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-                  onClick={() => setIsActive(false)}
-                >
+                <a href="#hackathons" className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in" onClick={() => setIsActive(false)}>Hackathons</a>
+
+                <a href="#contacts" className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in" onClick={() => setIsActive(false)}>
                   Contact
                 </a>
                 <a
@@ -138,7 +140,13 @@ function App() {
         <main className="w-[80%] mt-4">
           <div className="flex flex-col items-center justify-center mb-3">
             <h1 className="text-5xl font-bold text-center text-slate-200">
-              Hi 👋 , I'm Osi Obomighie
+              {/* Hi 👋 , I'm Osi Obomighie */}
+              <Typewriter options={{
+                strings: ['Hi 👋 , I\'m Osi Obomighie', 'Aspiring Software Engineer', 'Basketball Enthusiast', 'Anime Fan'],
+                  autoStart: true,
+                  loop: true,
+                }}
+/>
             </h1>
           </div>
           <section
@@ -167,16 +175,6 @@ function App() {
               <p className="text-lg text-textBase text-center">
                 I hope to one day create a piece of technology that I saw in an anime and make it a reality.
               </p>
-
-              <button className="w-full md:w-auto h-400 relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
-                <span className="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0" >
-                 <a href={pdf}
-                  target="_blank"
-                  rel='noreferrer'>
-                  Download CV 
-                 </a>
-                </span>
-              </button>
             </div>
           </section>
 
@@ -222,7 +220,7 @@ function App() {
               Projects.map((n, i) => (
                 <motion.div
                   key={n.id}
-                  className="border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out"
+                  className="border border-zinc-800 rounded-md p-2 min-w-[300px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out"
                 >
                   <p className="text-lg text-textBase font-medium uppercase">
                     {n.name.length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
@@ -264,6 +262,48 @@ function App() {
                   </div>
                 </motion.div>
               ))}
+          </section>
+
+          <section id='hackathons' className="flex flex-col items-center justify-evenly w-full my-24">
+            <p className="text-2xl text-gray-400 capitalize">Hackathons</p>
+            <div className="flex flex-wrap items-center justify-evenly w-full my-4 gap-4">
+              {Hackathons &&
+                Hackathons.map((n) => (
+                  <motion.div
+                    key={n.id}
+                    className="border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out"
+                  >
+                    <p className="text-lg text-textBase font-medium uppercase">
+                      {n.name.length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
+                    </p>
+
+                    <img
+                    src={n.imageSrc}
+                    className="w-full h-full object-cover rounded-md my-4"
+                    alt=""
+                  />
+                  <p className="text-lg text-textBase">
+                  <ReadMore>
+                    {n.description}
+                  </ReadMore>
+                  </p>
+
+                    <div className="flex flex-1 items-center justify-between">
+                      <p className="text-lg text-gray-300">
+                        Technologies
+                        <span className="block text-sm text-gray-500">
+                          {n.techs}
+                        </span>
+                      </p>
+                      <a href={n.github}>
+                        <motion.div whileTap={{ scale: 0.5 }}>
+                          <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />
+                        </motion.div>
+                      </a>
+                    </div>
+                  </motion.div>
+                ))}
+            </div>
           </section>
 
           <section
