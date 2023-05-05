@@ -15,8 +15,6 @@ import Typewriter from 'typewriter-effect';
 
 function App() {
 
-  
-  
   const [isActive, setIsActive] = useState(false)
   return (
     <AnimatePresence initial={false}>

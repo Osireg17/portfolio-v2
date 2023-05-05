@@ -32,10 +32,10 @@ export const Experience = [
       date: "March 2023 - April 2023",
       iconsSrc: <IoCodeWorking />,
       company: "JP Morgan Chase",
-      title: "Incoming Software Engineer Intern",
+      title: "Software Engineer - Spring Intern",
       location: "London, UK",
       description:
-        "Incoming Software Engineer Intern for JP Morgan Chase Intro to tech program",
+        "During my spring internship, I gained TDD proficiency in Spring Boot and JUnit, and expanded my knowledge in cybersecurity and UI/UX. As part of a team developing a web app for UN Goal 4, I led front-end development using React and TailwindCSS, integrating multiple APIs for a seamless, user-friendly platform.",
 
     },
     {
