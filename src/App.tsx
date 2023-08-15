@@ -1,12 +1,12 @@
-import React , {useState}from 'react';
+import React, { useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import pdf from './CV/Osiregbemhe.pdf'
-import {IoMenu, IoLogoGithub} from 'react-icons/io5'
-import {RxCrossCircled} from 'react-icons/rx'
+import { IoMenu, IoLogoGithub } from 'react-icons/io5'
+import { RxCrossCircled } from 'react-icons/rx'
 import { Experience, Projects, SocialLinks, Hackathons } from "./data";
 import { AnimatePresence, motion } from "framer-motion";
 import profile from './images/profile.jpg'
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import "react-vertical-timeline-component/style.min.css";
 import ReadMore from './ReadMore';
 import Typewriter from 'typewriter-effect';
@@ -16,9 +16,17 @@ import Typewriter from 'typewriter-effect';
 function App() {
 
   const [isActive, setIsActive] = useState(false)
+  const [expandedStates, setExpandedStates] = useState(new Array(Projects.length).fill(false));
+
+  const handleToggleExpansion = (index: number) => {
+    const newStates = [...expandedStates];
+    newStates[index] = !newStates[index];
+    setExpandedStates(newStates);
+  };
+
   return (
     <AnimatePresence initial={false}>
-    <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
+      <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
         <nav className="w-full px-6 z-50  fixed inset-x-0 top-2 flex justify-center items-center ">
           <div className=" w-full md:w-880 bg-navBar p-4 rounded-2xl flex items-center">
             <p className="text-2xl text-slate-200 font-medium">Osi Obomighie</p>
@@ -124,10 +132,10 @@ function App() {
         </nav>
 
         <div className="w-screen h-screen flex flex-col items-center justify-center relative" id="home">
-        <Spline scene="https://prod.spline.design/V8fVYCI-HhjhVe6E/scene.splinecode" />
-        
-        {/* <Spline scene="https://prod.spline.design/8CNI2WaiKU8c-jxH/scene.splinecode" /> */}
-        {/* <Spline scene="https://prod.spline.design/V8fVYCI-HhjhVe6E/scene.splinecode" /> */}
+          <Spline scene="https://prod.spline.design/V8fVYCI-HhjhVe6E/scene.splinecode" />
+
+          {/* <Spline scene="https://prod.spline.design/8CNI2WaiKU8c-jxH/scene.splinecode" /> */}
+          {/* <Spline scene="https://prod.spline.design/V8fVYCI-HhjhVe6E/scene.splinecode" /> */}
           <div className="absolute bottom-10 w-full flex justify-center items-center">
             <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl ">
               <p className="text-white">Press and drag to orbit</p>
@@ -141,10 +149,10 @@ function App() {
               {/* Hi 👋 , I'm Osi Obomighie */}
               <Typewriter options={{
                 strings: ['Hi 👋 , I\'m Osi Obomighie', 'Aspiring Software Engineer', 'Basketball Enthusiast', 'Anime Fan'],
-                  autoStart: true,
-                  loop: true,
-                }}
-/>
+                autoStart: true,
+                loop: true,
+              }}
+              />
             </h1>
           </div>
           <section
@@ -218,7 +226,7 @@ function App() {
               Projects.map((n, i) => (
                 <motion.div
                   key={n.id}
-                  className="border border-zinc-800 rounded-md p-2 min-w-[300px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out"
+                  className={`border border-zinc-800 rounded-md p-2 min-w-[300px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out w-[300px] ${expandedStates[i] ? 'h-auto' : 'h-[450px]'} flex flex-col`}
                 >
                   <p className="text-lg text-textBase font-medium uppercase">
                     {n.name.length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
@@ -226,25 +234,14 @@ function App() {
 
                   <img
                     src={n.imageSrc}
-                    className="w-full h-full object-cover rounded-md my-4"
+                    className="w-auto h-[200px] object-cover rounded-md my-4"
                     alt=""
                   />
                   <p className="text-lg text-textBase">
-                  <ReadMore>
-                    {n.description}
-                  </ReadMore>
+                    <ReadMore onToggle={() => handleToggleExpansion(i)}>
+                      {n.description}
+                    </ReadMore>
                   </p>
-                  
-                
-                    {/* <p className="text-textBase text-sm">
-                      {n.description.length > 50
-                        ? `${n.description.slice(0, 50)}...`
-                        : n.description}
-                    </p> */}
-                
-
-                  
-
                   <div className="flex flex-1 items-center justify-between">
                     <p className="text-lg text-gray-300">
                       Technologies
@@ -262,29 +259,30 @@ function App() {
               ))}
           </section>
 
+
           <section id='hackathons' className="flex flex-col items-center justify-evenly w-full my-24">
             <p className="text-2xl text-gray-400 capitalize">Hackathons</p>
             <div className="flex flex-wrap items-center justify-evenly w-full my-4 gap-4">
               {Hackathons &&
-                Hackathons.map((n) => (
+                Hackathons.map((n, i) => (
                   <motion.div
                     key={n.id}
-                    className="border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out"
+                    className={`border border-zinc-800 rounded-md p-2 min-w-[300px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out w-[300px] ${expandedStates[i] ? 'h-auto' : 'h-[450px]'} flex flex-col`}
                   >
                     <p className="text-lg text-textBase font-medium uppercase">
                       {n.name.length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
                     </p>
 
                     <img
-                    src={n.imageSrc}
-                    className="w-full h-full object-cover rounded-md my-4"
-                    alt=""
-                  />
-                  <p className="text-lg text-textBase">
-                  <ReadMore>
-                    {n.description}
-                  </ReadMore>
-                  </p>
+                      src={n.imageSrc}
+                      className="w-auto h-[200px] object-cover rounded-md my-4"
+                      alt=""
+                    />
+                    <p className="text-lg text-textBase">
+                      <ReadMore onToggle={() => handleToggleExpansion(i)}>
+                        {n.description}
+                      </ReadMore>
+                    </p>
 
                     <div className="flex flex-1 items-center justify-between">
                       <p className="text-lg text-gray-300">
@@ -328,7 +326,7 @@ function App() {
 
         </main>
       </div>
-      </AnimatePresence>
+    </AnimatePresence>
   );
 }
 

@@ -15,17 +15,19 @@ import img6 from './Portfolio_Images/Chat-App.webp'
 import img7 from './Portfolio_Images/AC-Hack.webp'
 import img8 from './Portfolio_Images/Code-for-good.webp'
 import img9 from './Portfolio_Images/Kingdom-Code.jpg'
+import img10 from './Portfolio_Images/My project-1 (2).jpg'
+import img11 from './Portfolio_Images/IC Hack.jpeg'
   
 export const Experience = [
     {
       id: 1,
-      date: "July 2023 - June 2024",
+      date: "July 2023 - Present",
       iconsSrc: <IoCodeWorking />,
-      company: "Hewlett Packard Enterprise",
-      title: "Incoming Software Engineer Intern",
+      company: "Hewlett Packard",
+      title: "Software Engineer Intern",
       location: "Bristol, UK",
       description:
-        "Incoming Software Engineer Intern for Hewlett Packard Enterprise",
+        "Worked alongside the 'Origin' scrum team in full-stack application development, empowering product managers to release customer notices through a sturdy Golang microservice paired with a dynamic React interface. Employed Jenkins pipelines for smooth build, test, and deploy processes, making use of AWS-based Kubernetes clusters and Helm for expandable infrastructure. Adopted React reducers, context API, and Mirage for efficient UI state control and backend simulation, upholding superior code standards using Jest and Cypress tests",
     },
     {
       id: 2,
@@ -129,6 +131,14 @@ export const Experience = [
       techs: "React, Node.Js, GraphQL, Typescript, MySQL",
       github: "https://github.com/Osireg17/Chat-Application",
     },
+    {
+      id: 6,
+      name: "Fellow",
+      imageSrc: img10,
+      description:"I developed a social media app where Christians can come and ask about their faith as well as provide their own opinion on the word of God. Click the link below to view the website and sign up for early access.",
+      techs: "React, Node.Js, GraphQL, Typescript, MySQL",
+      github: "https://fellow-web.vercel.app/",
+    }
   ];
 
   export const Hackathons = [
@@ -154,6 +164,14 @@ export const Experience = [
       imageSrc: img9,
       description: "1st place in Kingdom Code: Build. This christian hackathon was hosted so that we could create technical solutions to help charities which glorify God. I worked on a team that helped develop a web application that would help foodbanks organise their inventory and help them keep track of their donations.",
       techs: "React, Typescript, GraphQL, Strapi, PostgreSQL",
+    },
+    {
+      id: 4,
+      name: "IC Hack",
+      imageSrc: img11,
+      description: "Secured a top 10 position in the Optiver Sponsor Challenge at ICHack by creating an advanced trading bot. Leveraged machine learning techniques on AWS EC2 for immediate market insights and strategic high-frequency trades.",
+      techs: "AWS, Python, Keras, Pandas",
+      github: "",
     }
   ];
   

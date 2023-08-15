@@ -4,14 +4,16 @@ import './Readmore.css';
 
 interface Props {
     children: string;
+    onToggle: () => void;
 }
 
 
-const ReadMore = ({children}: Props) => {
+const ReadMore = ({children, onToggle}: Props) => {
     const text = children;
     const [isReadMore, setIsReadMore] = useState(true);
     const toggleReadMore = () => {
       setIsReadMore(!isReadMore);
+      onToggle();
     };
     return (
       <p className="text">
