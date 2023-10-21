@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Spline from '@splinetool/react-spline';
-import pdf from './CV/Osiregbemhe.pdf'
+import pdf from './CV/Osiregbemhe_Obomighie-UK.pdf'
 import { IoMenu, IoLogoGithub } from 'react-icons/io5'
 import { RxCrossCircled } from 'react-icons/rx'
 import { Experience, Projects, SocialLinks, Hackathons } from "./data";
@@ -170,7 +170,7 @@ function App() {
             </div>
             <div className="w-full h-420 flex flex-col items-center justify-center mt-5">
               <p className="text-lg text-textBase text-center">
-                Currently an undergraduate at the University of Warwick studying Systems Engineering. I am passionate about technology and how it can be used to solve real world problems.
+                Currently an undergraduate at the University of Warwick studying Electrical Engineering. I am passionate about technology and how it can be used to solve real world problems.
               </p>
               <p className="text-lg text-textBase text-center">
                 I am also a keen learner and I am always looking to learn new technologies.
@@ -219,7 +219,7 @@ function App() {
           </section>
 
           <section
-            className="flex flex-wrap items-center justify-evenly my-24 gap-4"
+            className="flex flex-wrap items-center justify-evenly my-24 gap-2"
             id="projects"
           >
             {Projects &&

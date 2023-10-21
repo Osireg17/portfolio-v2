@@ -17,6 +17,9 @@ import img8 from './Portfolio_Images/Code-for-good.webp'
 import img9 from './Portfolio_Images/Kingdom-Code.jpg'
 import img10 from './Portfolio_Images/My project-1 (2).jpg'
 import img11 from './Portfolio_Images/IC Hack.jpeg'
+import img12 from './Portfolio_Images/Halo Logo[66] copy.png'
+import img13 from './Portfolio_Images/Logo.png'
+import img14 from './Portfolio_Images/IMLondon.logo.webp'
   
 export const Experience = [
     {
@@ -42,7 +45,7 @@ export const Experience = [
     },
     {
       id: 3,
-      date: "October 2022 - Present",
+      date: "October 2022 - June 2023",
       iconsSrc: <IoCodeWorking />,
       company: "Butterfly",
       title: "Software Engineer",
@@ -132,12 +135,36 @@ export const Experience = [
       github: "https://github.com/Osireg17/Chat-Application",
     },
     {
-      id: 6,
+      id: 7,
       name: "Fellow",
       imageSrc: img10,
       description:"I developed a social media app where Christians can come and ask about their faith as well as provide their own opinion on the word of God. Click the link below to view the website and sign up for early access.",
-      techs: "React, Node.Js, GraphQL, Typescript, MySQL",
+      techs: "React Native, Firebase, Typescript, Google Cloud Platform",
       github: "https://fellow-web.vercel.app/",
+    },
+    {
+      id: 8,
+      name: "Black Luxury Fashion Summit",
+      imageSrc: img13,
+      description:"I developed a social media app where Christians can come and ask about their faith as well as provide their own opinion on the word of God. Click the link below to view the website and sign up for early access.",
+      techs: "NextJs, Typescript, AWS API Gateway, AWS Lambda, AWS Dynamo DB",
+      github: "https://www.blackluxuryfashionsummit.com/",
+    },
+    {
+      id: 9,
+      name: "Halo Pharmacy",
+      imageSrc: img12,
+      description:"A webapp that allows for patients to be able to find out more about the new pharmacy as well as nominate the pharmacy to be their permanent pharmacy.",
+      techs: "NextJs, Typescript, AWS API Gateway, AWS Lambda, AWS SES, AWS Dynamo DB",
+      github: "https://www.halopharmacy.co.uk/",
+    },
+    {
+      id: 10,
+      name: "Imperfect London",
+      imageSrc: img14,
+      description:"A bespoke clothing brand that is based in London. I developed the website for the brand using Shopify CMS and Hydrogen.",
+      techs: "Hydrogen, Shopify CMS, Tailwind CSS",
+      github: "https://imperfectlondon.com/",
     }
   ];
 
