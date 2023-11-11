@@ -146,7 +146,7 @@ export const Experience = [
       id: 8,
       name: "Black Luxury Fashion Summit",
       imageSrc: img13,
-      description:"I developed a social media app where Christians can come and ask about their faith as well as provide their own opinion on the word of God. Click the link below to view the website and sign up for early access.",
+      description:"Developed a Sign up page for warwick first Black Luxury Fashion Summit. The website was developed using NextJs for the UI and AWS services for the backend.",
       techs: "NextJs, Typescript, AWS API Gateway, AWS Lambda, AWS Dynamo DB",
       github: "https://www.blackluxuryfashionsummit.com/",
     },
