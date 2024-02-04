@@ -29,26 +29,26 @@ import img20 from './Portfolio_Images/video-to-mp3.png'
 
 
 export const Experience = [
-  {
-    id: 1,
-    date: "June 2024 - August 2024",
-    iconsSrc: <IoCodeWorking />,
-    company: "Morgan Stanley",
-    title: "Incoming Software Engineer Intern",
-    location: "London, UK",
+  // {
+  //   id: 1,
+  //   date: "June 2024 - August 2024",
+  //   iconsSrc: <IoCodeWorking />,
+  //   company: "Morgan Stanley",
+  //   title: "Incoming Software Engineer Intern",
+  //   location: "London, UK",
 
 
-  },
-  {
-    id: 2,
-    date: "December 2023 - Present",
-    iconsSrc: <IoCodeWorking />,
-    company: "Fliproom",
-    title: "Software Engineer Intern",
-    location: "London, UK",
-    description:
-      "As a Backend Engineer, I specialize in the backend development of Fliproom's sneaker business management platform. My responsibilities include designing, developing, maintaining, and debugging core application logic, databases, and APIs. My work ensures efficient data and application integration, supporting the platform's key features like inventory management, sales tracking, and integration with Shopify. My focus on backend processes enhances the platform's performance and reliability in the dynamic footwear and high-fashion industry."
-  },
+  // },
+  // {
+  //   id: 2,
+  //   date: "December 2023 - Present",
+  //   iconsSrc: <IoCodeWorking />,
+  //   company: "Fliproom",
+  //   title: "Software Engineer Intern",
+  //   location: "London, UK",
+  //   description:
+  //     "As a Backend Engineer, I specialize in the backend development of Fliproom's sneaker business management platform. My responsibilities include designing, developing, maintaining, and debugging core application logic, databases, and APIs. My work ensures efficient data and application integration, supporting the platform's key features like inventory management, sales tracking, and integration with Shopify. My focus on backend processes enhances the platform's performance and reliability in the dynamic footwear and high-fashion industry."
+  // },
     {
       id: 3,
       date: "July 2023 - Present",
