@@ -20,10 +20,37 @@ import img11 from './Portfolio_Images/IC Hack.jpeg'
 import img12 from './Portfolio_Images/Halo Logo[66] copy.png'
 import img13 from './Portfolio_Images/Logo.png'
 import img14 from './Portfolio_Images/IMLondon.logo.webp'
-  
+import img15 from './Portfolio_Images/ICHack.jpeg'
+import img16 from './Portfolio_Images/Royal-Hackaway.jpeg'
+import img17 from './Portfolio_Images/AstonHack.png'
+import img18 from './Portfolio_Images/AI_Hackathon.jpeg'
+import img19 from './Portfolio_Images/Random-Bible-Verse-Generator.png'
+import img20 from './Portfolio_Images/video-to-mp3.png'
+
+
 export const Experience = [
+  {
+    id: 1,
+    date: "June 2024 - August 2024",
+    iconsSrc: <IoCodeWorking />,
+    company: "Morgan Stanley",
+    title: "Incoming Software Engineer Intern",
+    location: "London, UK",
+
+
+  },
+  {
+    id: 2,
+    date: "December 2023 - Present",
+    iconsSrc: <IoCodeWorking />,
+    company: "Fliproom",
+    title: "Software Engineer Intern",
+    location: "London, UK",
+    description:
+      "As a Backend Engineer, I specialize in the backend development of Fliproom's sneaker business management platform. My responsibilities include designing, developing, maintaining, and debugging core application logic, databases, and APIs. My work ensures efficient data and application integration, supporting the platform's key features like inventory management, sales tracking, and integration with Shopify. My focus on backend processes enhances the platform's performance and reliability in the dynamic footwear and high-fashion industry."
+  },
     {
-      id: 1,
+      id: 3,
       date: "July 2023 - Present",
       iconsSrc: <IoCodeWorking />,
       company: "Hewlett Packard",
@@ -33,7 +60,7 @@ export const Experience = [
         "Worked alongside the 'Origin' scrum team in full-stack application development, empowering product managers to release customer notices through a sturdy Golang microservice paired with a dynamic React interface. Employed Jenkins pipelines for smooth build, test, and deploy processes, making use of AWS-based Kubernetes clusters and Helm for expandable infrastructure. Adopted React reducers, context API, and Mirage for efficient UI state control and backend simulation, upholding superior code standards using Jest and Cypress tests",
     },
     {
-      id: 2,
+      id: 4,
       date: "March 2023 - April 2023",
       iconsSrc: <IoCodeWorking />,
       company: "JP Morgan Chase",
@@ -44,7 +71,7 @@ export const Experience = [
 
     },
     {
-      id: 3,
+      id: 5,
       date: "October 2022 - June 2023",
       iconsSrc: <IoCodeWorking />,
       company: "Butterfly",
@@ -54,7 +81,7 @@ export const Experience = [
         "I am currently working as a Software Engineer at Butterfly, a startup that is developing a social media platform for students to connect with each other and share their experiences. The app is currently only avaiable to Warwick University students but will be rolled out to other universities in the future."
     },
     {
-      id: 4,
+      id: 6,
       date: "July 2022 - August 2022",
       iconsSrc: <IoCodeWorking />,
       company: "Ford Motors",
@@ -64,7 +91,7 @@ export const Experience = [
         "I undertook a summer internship at Ford Motors where I worked with the rapid digital prototype team to develop a prototype for their In-Vehicle Entertainment Project. We built a working prototype of an arcade racing game using Unity and C#. The game is able to interact with the car's sensors and actuators, which is demoed using raspberry pi, arduino and websockets allowing the user to have the ultimate experience of racing the car.",
     },
     {
-      id: 5,
+      id: 7,
       date: "June 2022 - July 2022",
       iconsSrc: <IoCodeWorking />,
       company: "Lloyds Banking Group",
@@ -74,7 +101,7 @@ export const Experience = [
         "I undertook a spring week at Lloyds Banking Group, where I developed my knowledge on the Fintech industry. During, the spring week I used python to develop a program to analysis data of 12000 different simulated bank transactions and then presented any findings to a panel of Lloyds bank employees. I also worked in a group to develop a secure video chat application using the MERN stack which included 2 factor authentication using a random generated password.",
     },
     {
-      id: 6,
+      id: 8,
       date: "July 2021 - August 2021",
       iconsSrc: <IoCodeWorking />,
       company: "Leonardo",
@@ -156,7 +183,7 @@ export const Experience = [
       imageSrc: img12,
       description:"A webapp that allows for patients to be able to find out more about the new pharmacy as well as nominate the pharmacy to be their permanent pharmacy.",
       techs: "NextJs, Typescript, AWS API Gateway, AWS Lambda, AWS SES, AWS Dynamo DB",
-      github: "https://www.halopharmacy.co.uk/",
+      github: "https://github.com/Osireg17/halo-pharmacy",
     },
     {
       id: 10,
@@ -165,40 +192,81 @@ export const Experience = [
       description:"A bespoke clothing brand that is based in London. I developed the website for the brand using Shopify CMS and Hydrogen.",
       techs: "Hydrogen, Shopify CMS, Tailwind CSS",
       github: "https://imperfectlondon.com/",
+    },
+    {
+      id: 11,
+      name: "Bible Verse Image Generator",
+      imageSrc: img19,
+      description: "A web application that allows users to generate images of bible verses. The application uses the Bible API to fetch the bible verses and then uses the Unsplash API to fetch images, then creates a nice downloadable image which can be used for personal use.",
+      techs: "NextJs, Typescript, Bible API, AWS Lambda, AWS Dynamo DB, AWS GraphQL",
+      github: "https://github.com/Osireg17/bible_qoute_generator"
+    },
+    {
+      id: 12,
+      name: "Youtube Video to Audio Converter",
+      imageSrc: img20,
+      description: "A microservice application that allows users to convert youtube videos to mp3 files and then download them. The application has three microservices that handle the different parts of the application. The first service is the authenication application, the second service is the youtube video to mp3 converter and the third service is the download service.",
+      techs: "Python, Flask, Docker, Kubernetes, MySQL, MongoDB, RabbitMQ",
+      github: "https://github.com/Osireg17/video_to_mp3"
     }
   ];
 
   export const Hackathons = [
     {
       id: 1,
-      name: "Imperial AC Hackathon",
+      name: "Imperial ACS Hackathon 2023",
       imageSrc: img7,
       description: "Competed in Imperial College London AC Hack, where I worked with other liked minded individuals to develop a web application that allows users to keep track of their mood and suggest activities that they can do to improve their mood during the day",
-      techs: "React, Apache, Python, Flask, Tensorflow, Pytorch ",
-      github: "",
+      techs: "React, Apache Spark, Python, Flask, Tensorflow, Pytorch ",
     },
     {
       id: 2,
-      name: "JP Morgan Code for Good Hackathon",
+      name: "JP Morgan Code for Good Hackathon 2023",
       imageSrc: img8,
       description: "Won the JP Morgan Code for Good Hackathon, where I worked with 4 other developers to develop a social media app to allow for deafblind people to have a more inclusive social media experience.",
       techs: "Flutter, Firebase, Dart, Google API's",
-      github: "",
     },
     {
       id: 3,
-      name: "Kingdom Code: Build Hackathon",
+      name: "Kingdom Code: Build Hackathon 2023",
       imageSrc: img9,
       description: "1st place in Kingdom Code: Build. This christian hackathon was hosted so that we could create technical solutions to help charities which glorify God. I worked on a team that helped develop a web application that would help foodbanks organise their inventory and help them keep track of their donations.",
       techs: "React, Typescript, GraphQL, Strapi, PostgreSQL",
     },
     {
       id: 4,
-      name: "IC Hack",
+      name: "IC Hack 2023",
       imageSrc: img11,
-      description: "Secured a top 10 position in the Optiver Sponsor Challenge at ICHack by creating an advanced trading bot. Leveraged machine learning techniques on AWS EC2 for immediate market insights and strategic high-frequency trades.",
-      techs: "AWS, Python, Keras, Pandas",
-      github: "",
+      description: "Secured a top 10 position in the Optiver Sponsor Challenge at ICHack by creating an advanced trading bot that would take historical data of several stocks, developed a statistical arbitrage strategy that was implemented on the Optibook exchange.. Leveraged machine learning techniques on AWS EC2 for immediate market insights and strategic high-frequency trades.",
+      techs: "AWS, Python, Numpy, Pandas",
+    },
+    {
+      id: 5,
+      name: "Royal Hackaway V7",
+      imageSrc: img16,
+      description: "As a group of 5, I was part of a team that developed a fullstack web application that utlised the power of GPT4 for sentiment analysis, the Spotify Recommendations API for musical knowledge, and DALL-E 3 for pretty pictures, Sentiment always knows exactly what you need to hear. We also developed a dashboard using Taipy framework to provide a fascinating and easy-to-digest statistical insight into how your mood changes over time.",
+      techs: "Flask, Python, React, Typescript, Spotify Api, GPT-4, Dall-e3, Taipy",
+    },
+    {
+      id: 6,
+      name: "IC Hack 2024",
+      imageSrc: img15,
+      description: "Attended IC Hack 2024, where I competed in the Marshall Wace Sponsor Challenge, where we were tasked with developing a groud breaking learning platform. I competed in a group of 6 where we developed a web application called QuizQPT that would create ondemand past paper so that teachers and students can have access to infinite revision material. I worked on the DSLInerpreter on the backend that was used to take text based prompts and convert them into diagrams that would be used within the past papers. Our Project finished in the top 5 of the Marshall Wace Sponsor Challenge.",
+      techs: "React, Typescript, Supabase, GPT-4, ExpressJs",
+    },
+    {
+      id: 7,
+      name: "AstonHack9",
+      imageSrc: img17,
+      description: "I will be attending AstonHack9",
+      techs: "",
+    },
+    {
+      id: 8,
+      name: "Encode Club AI Hackathon",
+      imageSrc: img18,
+      description: "I will be attending Encode Club AI Hackathon",
+      techs: "",
     }
   ];
   

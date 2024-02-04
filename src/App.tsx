@@ -170,16 +170,19 @@ function App() {
             </div>
             <div className="w-full h-420 flex flex-col items-center justify-center mt-5">
               <p className="text-lg text-textBase text-center">
-                Currently an undergraduate at the University of Warwick studying Electrical Engineering. I am passionate about technology and how it can be used to solve real world problems.
+              I am a driven software engineer with a robust academic background at Warwick University, passionately engaging in technology and team-driven environments.
               </p>
               <p className="text-lg text-textBase text-center">
-                I am also a keen learner and I am always looking to learn new technologies.
+              My experience at Hewlett-Packard Enterprise, JP Morgan, FoodClub, and Butterfly Technologies reflects a strong commitment to excellence in software development.
               </p>
               <p className="text-lg text-textBase text-center">
-                I enjoy using my skills to create projects and compete in hackathons, I use them as an opportunity to learn new technologies and to work with new people and win some prizes along the way.
+              Adept in a wide range of programming languages, I also excel in mentoring and sharing knowledge, focusing on fostering teamwork and leadership skills
               </p>
               <p className="text-lg text-textBase text-center">
-                I hope to one day create a piece of technology that I saw in an anime and make it a reality.
+              Actively participating in hackathons, I embrace challenges and competitive scenarios, mirroring my enthusiasm for basketball. 
+              </p>
+              <p className="text-lg text-textBase text-center">
+              Eager to explore new opportunities and contribute to community-oriented initiatives.
               </p>
             </div>
           </section>
@@ -291,11 +294,11 @@ function App() {
                           {n.techs}
                         </span>
                       </p>
-                      <a href={n.github}>
+                      {/* <a href={n.github}>
                         <motion.div whileTap={{ scale: 0.5 }}>
                           <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />
                         </motion.div>
-                      </a>
+                      </a> */}
                     </div>
                   </motion.div>
                 ))}
