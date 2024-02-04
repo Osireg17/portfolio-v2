@@ -154,14 +154,6 @@ export const Experience = [
       github: "https://github.com/Osireg17/Facial-Recognition",
     },
     {
-      id: 6,
-      name: "Chat Application",
-      imageSrc: img6,
-      description:"Still in progress...",
-      techs: "React, Node.Js, GraphQL, Typescript, MySQL",
-      github: "https://github.com/Osireg17/Chat-Application",
-    },
-    {
       id: 7,
       name: "Fellow",
       imageSrc: img10,
