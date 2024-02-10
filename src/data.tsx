@@ -191,7 +191,7 @@ export const Experience = [
       imageSrc: img19,
       description: "A web application that allows users to generate images of bible verses. The application uses the Bible API to fetch the bible verses and then uses the Unsplash API to fetch images, then creates a nice downloadable image which can be used for personal use.",
       techs: "NextJs, Typescript, Bible API, AWS Lambda, AWS Dynamo DB, AWS GraphQL",
-      github: "https://github.com/Osireg17/bible_qoute_generator"
+      github: "https://prod.d3bl58w44ip2gh.amplifyapp.com/"
     },
     {
       id: 12,
