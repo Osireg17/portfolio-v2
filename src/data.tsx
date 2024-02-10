@@ -11,7 +11,6 @@ import img2 from './Portfolio_Images/NarutoNotions.jpg'
 import img3 from './Portfolio_Images/Picture2.jpg'
 import img4 from './Portfolio_Images/Vivy.webp'
 import img5 from './Portfolio_Images/NBA.jpg'
-import img6 from './Portfolio_Images/Chat-App.webp'
 import img7 from './Portfolio_Images/AC-Hack.webp'
 import img8 from './Portfolio_Images/Code-for-good.webp'
 import img9 from './Portfolio_Images/Kingdom-Code.jpg'
@@ -26,6 +25,8 @@ import img17 from './Portfolio_Images/AstonHack.png'
 import img18 from './Portfolio_Images/AI_Hackathon.jpeg'
 import img19 from './Portfolio_Images/Random-Bible-Verse-Generator.png'
 import img20 from './Portfolio_Images/video-to-mp3.png'
+import img21 from './Portfolio_Images/Terraria.jpeg'
+import img22 from './Portfolio_Images/Price_tracker.webp'
 
 
 export const Experience = [
@@ -200,6 +201,22 @@ export const Experience = [
       description: "A microservice application that allows users to convert youtube videos to mp3 files and then download them. The application has three microservices that handle the different parts of the application. The first service is the authenication application, the second service is the youtube video to mp3 converter and the third service is the download service.",
       techs: "Python, Flask, Docker, Kubernetes, MySQL, MongoDB, RabbitMQ",
       github: "https://github.com/Osireg17/video_to_mp3"
+    },
+    {
+      id: 13, 
+      name: "Terraria Pygame Clone",
+      imageSrc: img21,
+      description: "A clone of the popular game Terraria. The game is developed using the Pygame library and is a 2D game that allows the user to explore the world and build structures. No real motivation behind it, purely did it out of fun and to learn pygame",
+      techs: "Python, Pygame",
+      github: "https://github.com/Osireg17/Terraria-Pygame-Clone"
+    },
+    {
+      id: 14,
+      name: "Amazon Price Tracker",
+      imageSrc: img22,
+      description: "A Django web application that allows users to track the price of items on Amazon. This is done through web scraping and searching for the product name and price. This has come in hand multiple times, escpecially around relative's birthdays and Christmas.",
+      techs: "Python, Django, SQLite",
+      github: "https://github.com/Osireg17/Amazon-Price-Tracker"
     }
   ];
 

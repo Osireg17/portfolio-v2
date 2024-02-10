@@ -173,7 +173,7 @@ function App() {
               I am a driven software engineer with a robust academic background at Warwick University, passionately engaging in technology and team-driven environments.
               </p>
               <p className="text-lg text-textBase text-center">
-              My experience at Hewlett-Packard Enterprise, JP Morgan, FoodClub, and Butterfly Technologies reflects a strong commitment to excellence in software development.
+              My experience at Hewlett-Packard Enterprise, JP Morgan, Lloyds Banking, and Ford Motors reflects a strong commitment to excellence in software development.
               </p>
               <p className="text-lg text-textBase text-center">
               Adept in a wide range of programming languages, I also excel in mentoring and sharing knowledge, focusing on fostering teamwork and leadership skills
