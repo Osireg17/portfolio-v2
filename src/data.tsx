@@ -20,41 +20,42 @@ import img12 from './Portfolio_Images/Halo Logo[66] copy.png'
 import img13 from './Portfolio_Images/Logo.png'
 import img14 from './Portfolio_Images/IMLondon.logo.webp'
 import img15 from './Portfolio_Images/ICHack.jpeg'
-import img16 from './Portfolio_Images/Royal-Hackaway.jpeg'
+// import img16 from './Portfolio_Images/Royal-Hackaway.jpeg'
 import img17 from './Portfolio_Images/AstonHack.png'
 import img18 from './Portfolio_Images/AI_Hackathon.jpeg'
 import img19 from './Portfolio_Images/Random-Bible-Verse-Generator.png'
 import img20 from './Portfolio_Images/video-to-mp3.png'
 import img21 from './Portfolio_Images/Terraria.jpeg'
 import img22 from './Portfolio_Images/Price_tracker.webp'
+import img23 from './Portfolio_Images/HackTheBurgh.png'
 
 
 export const Experience = [
-  // {
-  //   id: 1,
-  //   date: "June 2024 - August 2024",
-  //   iconsSrc: <IoCodeWorking />,
-  //   company: "Morgan Stanley",
-  //   title: "Incoming Software Engineer Intern",
-  //   location: "London, UK",
+  {
+    id: 1,
+    date: "June 2024 - August 2024",
+    iconsSrc: <IoCodeWorking />,
+    company: "Morgan Stanley",
+    title: "Incoming Software Engineer Intern",
+    location: "London, UK",
 
 
-  // },
-  // {
-  //   id: 2,
-  //   date: "December 2023 - Present",
-  //   iconsSrc: <IoCodeWorking />,
-  //   company: "Fliproom",
-  //   title: "Software Engineer Intern",
-  //   location: "London, UK",
-  //   description:
-  //     "As a Backend Engineer, I specialize in the backend development of Fliproom's sneaker business management platform. My responsibilities include designing, developing, maintaining, and debugging core application logic, databases, and APIs. My work ensures efficient data and application integration, supporting the platform's key features like inventory management, sales tracking, and integration with Shopify. My focus on backend processes enhances the platform's performance and reliability in the dynamic footwear and high-fashion industry."
-  // },
+  },
+  {
+    id: 2,
+    date: "December 2023 - March 2024",
+    iconsSrc: <IoCodeWorking />,
+    company: "Fliproom",
+    title: "Software Engineer Intern",
+    location: "London, UK",
+    description:
+      "As a Backend Engineer, I specialized in the backend development of Fliproom's sneaker business management platform. My responsibilities included designing, developing, maintaining, and debugging core application logic, databases, and APIs. My work ensures efficient data and application integration, supporting the platform's key features like inventory management, sales tracking, and integration with Shopify. My focus on backend processes enhances the platform's performance and reliability in the dynamic footwear and high-fashion industry."
+  },
     {
       id: 3,
       date: "July 2023 - Present",
       iconsSrc: <IoCodeWorking />,
-      company: "Hewlett Packard",
+      company: "Hewlett Packard Enterprise",
       title: "Software Engineer Intern",
       location: "Bristol, UK",
       description:
@@ -247,7 +248,7 @@ export const Experience = [
       name: "IC Hack 2023",
       imageSrc: img11,
       description: "Secured a top 10 position in the Optiver Sponsor Challenge at ICHack by creating an advanced trading bot that would take historical data of several stocks, developed a statistical arbitrage strategy that was implemented on the Optibook exchange.. Leveraged machine learning techniques on AWS EC2 for immediate market insights and strategic high-frequency trades.",
-      techs: "AWS, Python, Numpy, Pandas",
+      techs: "Optibook Python, Numpy, Pandas",
     },
     {
       id: 5,
@@ -256,13 +257,13 @@ export const Experience = [
       description: "I returned to Kingdom Code Build 2024, not as a developer helping other people improve their projects, but as a project lead. I led a team of 5 to help refactor and redesign the UI of the mobile application that I had been working on. I also implemented a chat feature that allowed people to communicate between themselves.",
       techs: "React Native, Firebase, Typescript, Google Cloud Platform",
     },
-    {
-      id: 6,
-      name: "Royal Hackaway V7",
-      imageSrc: img16,
-      description: "As a group of 5, I was part of a team that developed a fullstack web application that utlised the power of GPT4 for sentiment analysis, the Spotify Recommendations API for musical knowledge, and DALL-E 3 for pretty pictures, Sentiment always knows exactly what you need to hear. We also developed a dashboard using Taipy framework to provide a fascinating and easy-to-digest statistical insight into how your mood changes over time.",
-      techs: "Flask, Python, React, Typescript, Spotify Api, GPT-4, Dall-e3, Taipy",
-    },
+    // {
+    //   id: 6,
+    //   name: "Royal Hackaway V7",
+    //   imageSrc: img16,
+    //   description: "As a group of 5, I was part of a team that developed a fullstack web application that utlised the power of GPT4 for sentiment analysis, the Spotify Recommendations API for musical knowledge, and DALL-E 3 for pretty pictures, Sentiment always knows exactly what you need to hear. We also developed a dashboard using Taipy framework to provide a fascinating and easy-to-digest statistical insight into how your mood changes over time.",
+    //   techs: "Flask, Python, React, Typescript, Spotify Api, GPT-4, Dall-e3, Taipy",
+    // },
     {
       id: 7,
       name: "IC Hack 2024",
@@ -274,11 +275,18 @@ export const Experience = [
       id: 8,
       name: "AstonHack9",
       imageSrc: img17,
-      description: "I will be attending AstonHack9",
-      techs: "",
+      description: "Participated in AstonHack9, where I worked solo to develop a fullstack application, that would allow users to enter a topic and subtopics, the application will then query youtube API and OpenAI AI to generate a course. This course would include youtube videos on the topic, transcript of the youtube video and questions and notes based of the video. Users would be able to save these courses and come back to them at any time",
+      techs: "NextJs, Prisma, OpenAI, Youtube API, MySQL",
     },
     {
       id: 9,
+      name: "HackTheBurgh 2024",
+      imageSrc: img23,
+      description: "Secured victory in the Optiver challenge at HackTheBurgh 2024, collaborating with three fellow developers. We engineered a trading bot leveraging sentiment analysis to dynamically adapt to abrupt market fluctuations triggered by news events, aiming to mitigate potential significant losses.",
+      techs: "Python, Pandas, Numpy, Optibook API",
+    },
+    {
+      id: 10,
       name: "Encode Club AI Hackathon",
       imageSrc: img18,
       description: "I will be attending Encode Club AI Hackathon",
