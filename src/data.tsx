@@ -257,13 +257,6 @@ export const Experience = [
       description: "I returned to Kingdom Code Build 2024, not as a developer helping other people improve their projects, but as a project lead. I led a team of 5 to help refactor and redesign the UI of the mobile application that I had been working on. I also implemented a chat feature that allowed people to communicate between themselves.",
       techs: "React Native, Firebase, Typescript, Google Cloud Platform",
     },
-    // {
-    //   id: 6,
-    //   name: "Royal Hackaway V7",
-    //   imageSrc: img16,
-    //   description: "As a group of 5, I was part of a team that developed a fullstack web application that utlised the power of GPT4 for sentiment analysis, the Spotify Recommendations API for musical knowledge, and DALL-E 3 for pretty pictures, Sentiment always knows exactly what you need to hear. We also developed a dashboard using Taipy framework to provide a fascinating and easy-to-digest statistical insight into how your mood changes over time.",
-    //   techs: "Flask, Python, React, Typescript, Spotify Api, GPT-4, Dall-e3, Taipy",
-    // },
     {
       id: 7,
       name: "IC Hack 2024",
@@ -275,7 +268,7 @@ export const Experience = [
       id: 8,
       name: "AstonHack9",
       imageSrc: img17,
-      description: "Participated in AstonHack9, where I worked solo to develop a fullstack application, that would allow users to enter a topic and subtopics, the application will then query youtube API and OpenAI AI to generate a course. This course would include youtube videos on the topic, transcript of the youtube video and questions and notes based of the video. Users would be able to save these courses and come back to them at any time",
+      description: "At AstonHack9, I started developing a full-stack application that generates personalized courses based on user-specified topics and subtopics. The application utilizes the YouTube API and OpenAI AI to curate relevant videos, transcripts, questions, and notes for each course. Users can save these dynamically generated courses and access them at any time, enabling continuous learning on their chosen subjects.",
       techs: "NextJs, Prisma, OpenAI, Youtube API, MySQL",
     },
     {
@@ -289,8 +282,9 @@ export const Experience = [
       id: 10,
       name: "Encode Club AI Hackathon",
       imageSrc: img18,
-      description: "I will be attending Encode Club AI Hackathon",
-      techs: "",
+      description:
+          "At the Encode Club AI Hackathon, I continued developing my AI Learning platform as a solo developer. I added a quiz feature to test users' understanding of the YouTube videos, as well as a summary feature. Moving forward, I plan to introduce a summary quiz that assesses users' overall comprehension of each topic.",
+      techs: "NextJs, Prisma, OpenAI, Youtube API, MySQL",
     }
   ];
   
