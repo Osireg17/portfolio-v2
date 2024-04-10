@@ -31,16 +31,16 @@ import img23 from './Portfolio_Images/HackTheBurgh.png'
 
 
 export const Experience = [
-  {
-    id: 1,
-    date: "June 2024 - August 2024",
-    iconsSrc: <IoCodeWorking />,
-    company: "Morgan Stanley",
-    title: "Incoming Software Engineer Intern",
-    location: "London, UK",
-
-
-  },
+  // {
+  //   id: 1,
+  //   date: "June 2024 - August 2024",
+  //   iconsSrc: <IoCodeWorking />,
+  //   company: "Morgan Stanley",
+  //   title: "Incoming Software Engineer Intern",
+  //   location: "London, UK",
+  //
+  //
+  // },
   {
     id: 2,
     date: "December 2023 - March 2024",
@@ -192,7 +192,7 @@ export const Experience = [
       name: "Bible Verse Image Generator",
       imageSrc: img19,
       description: "A web application that allows users to generate images of bible verses. The application uses the Bible API to fetch the bible verses and then uses the Unsplash API to fetch images, then creates a nice downloadable image which can be used for personal use.",
-      techs: "NextJs, Typescript, Bible API, AWS Lambda, AWS Dynamo DB, AWS GraphQL",
+      techs: "NextJs, Typescript, Bible API, AWS Services, Unsplash API",
       github: "https://prod.d3bl58w44ip2gh.amplifyapp.com/"
     },
     {
@@ -218,7 +218,15 @@ export const Experience = [
       description: "A Django web application that allows users to track the price of items on Amazon. This is done through web scraping and searching for the product name and price. This has come in hand multiple times, escpecially around relative's birthdays and Christmas.",
       techs: "Python, Django, SQLite",
       github: "https://github.com/Osireg17/Amazon-Price-Tracker"
+    },{
+        id: 15,
+        name: "Prescription Reminder App",
+        imageSrc: "",
+        description: "A very basic web application that allows my fathers pharmacies to be able to send mass sms messages to their customers to come and pick up their prescriptions. The application uses the Webex API to send sms messages to the customers. Going to expand on this project in the future to include more features that benefit my fathers pharmacy.",
+        techs: "Nextjs, Flask",
+        github: "https://github.com/Osireg17/Automate_Text_Frontend"
     }
+
   ];
 
   export const Hackathons = [
