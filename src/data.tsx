@@ -172,14 +172,6 @@ export const Projects = [
     techs: "NextJs, TypeScript, Docker, PostgreSQL, OpenAI API, Drizzle ORM, Clerk Auth, GCP",
     github: "https://github.com/Osireg17/AceYourHireview"
   },
-  {
-    id: 8,
-    name: "TV, Anime, Book and Movie Recommendation Engine",
-    imageSrc: "",
-    description: "(In Development) A web application that allows users to get recommendations on TV shows, anime, books and movies. The application uses the TMDb API to fetch the data and then uses a recommendation engine to provide recommendations to the user. The recommendation engine uses a collaborative filtering algorithm to provide recommendations to the user.",
-    techs: "Angular, Typescript, Flask, PostgreSQL, TMDb API",
-    github: ""
-  },
 ];
 
 export const Hackathons = [
