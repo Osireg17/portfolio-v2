@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Spline from '@splinetool/react-spline';
-import pdf from './CV/Osiregbemhe_Obomighie-UK.pdf'
+import pdf from './CV/Osiregbemhe_Obomighie_US_Grad copy.pdf'
 import { IoMenu, IoLogoGithub } from 'react-icons/io5'
 import { RxCrossCircled } from 'react-icons/rx'
 import { Experience, Projects, SocialLinks, Hackathons } from "./data";
@@ -170,19 +170,19 @@ function App() {
             </div>
             <div className="w-full h-420 flex flex-col items-center justify-center mt-5">
               <p className="text-lg text-textBase text-center">
-              I am a driven software engineer with a robust academic background at Warwick University, passionately engaging in technology and team-driven environments.
+                I am a driven software engineer with a robust academic background at Warwick University, passionately engaging in technology and team-driven environments.
               </p>
               <p className="text-lg text-textBase text-center">
-              My experience at Hewlett-Packard Enterprise, JP Morgan, Lloyds Banking, and Ford Motors reflects a strong commitment to excellence in software development.
+                My experience at Hewlett-Packard Enterprise, JP Morgan, Lloyds Banking, and Ford Motors reflects a strong commitment to excellence in software development.
               </p>
               <p className="text-lg text-textBase text-center">
-              Adept in a wide range of programming languages, I also excel in mentoring and sharing knowledge, focusing on fostering teamwork and leadership skills
+                Adept in a wide range of programming languages, I also excel in mentoring and sharing knowledge, focusing on fostering teamwork and leadership skills
               </p>
               <p className="text-lg text-textBase text-center">
-              Actively participating in hackathons, I embrace challenges and competitive scenarios, mirroring my enthusiasm for basketball. 
+                Actively participating in hackathons, I embrace challenges and competitive scenarios, mirroring my enthusiasm for basketball.
               </p>
               <p className="text-lg text-textBase text-center">
-              Eager to explore new opportunities and contribute to community-oriented initiatives.
+                Eager to explore new opportunities and contribute to community-oriented initiatives.
               </p>
             </div>
           </section>
