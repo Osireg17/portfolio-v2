@@ -5,21 +5,14 @@ import {
 } from "react-icons/io5";
 
 
-//impot javascript from react-icons
-import img1 from './Portfolio_Images/CashCow.jpg'
-import img2 from './Portfolio_Images/NarutoNotions.jpg'
-import img3 from './Portfolio_Images/Picture2.jpg'
-import img4 from './Portfolio_Images/Vivy.webp'
-import img5 from './Portfolio_Images/NBA.jpg'
+
 import img7 from './Portfolio_Images/AC-Hack.webp'
 import img8 from './Portfolio_Images/Code-for-good.webp'
 import img9 from './Portfolio_Images/Kingdom-Code.jpg'
 import img10 from './Portfolio_Images/My project-1 (2).jpg'
 import img11 from './Portfolio_Images/IC Hack.jpeg'
-import img12 from './Portfolio_Images/Halo Logo[66] copy.png'
-import img13 from './Portfolio_Images/Logo.png'
-import img14 from './Portfolio_Images/IMLondon.logo.webp'
 import img15 from './Portfolio_Images/ICHack.jpeg'
+import topicTutor from './Portfolio_Images/TopicTutor.png'
 // import img16 from './Portfolio_Images/Royal-Hackaway.jpeg'
 import img17 from './Portfolio_Images/AstonHack.png'
 import img18 from './Portfolio_Images/AI_Hackathon.jpeg'
@@ -158,11 +151,11 @@ export const Projects = [
   },
   {
     id: 6,
-    name: "WatchAndLearn",
-    imageSrc: "",
+    name: "Topic Tutor",
+    imageSrc: topicTutor,
     description: "A web application that allows users to generate personalized courses based on user-specified topics and subtopics. The application utilizes the YouTube API and OpenAI AI to curate relevant videos, transcripts, questions, and notes for each course. Users can save these dynamically generated courses and access them at any time, enabling continuous learning on their chosen subjects. This project was developed during the AstonHack9 Hackathon and AI Encode Hackathon.",
     techs: "NextJs, TypeScript, Docker, PostgreSQL, OpenAI API, Prisma, NextAuth",
-    github: "https://github.com/Osireg17/AstonHack9"
+    github: "www.topictuor.co.uk"
   },
   {
     id: 7,
