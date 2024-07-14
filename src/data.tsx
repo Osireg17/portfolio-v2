@@ -155,7 +155,7 @@ export const Projects = [
     imageSrc: topicTutor,
     description: "A web application that allows users to generate personalized courses based on user-specified topics and subtopics. The application utilizes the YouTube API and OpenAI AI to curate relevant videos, transcripts, questions, and notes for each course. Users can save these dynamically generated courses and access them at any time, enabling continuous learning on their chosen subjects. This project was developed during the AstonHack9 Hackathon and AI Encode Hackathon.",
     techs: "NextJs, TypeScript, Docker, PostgreSQL, OpenAI API, Prisma, NextAuth",
-    github: "https://www.topictuor.co.uk"
+    github: "https://www.topictutor.co.uk"
   },
   {
     id: 7,
