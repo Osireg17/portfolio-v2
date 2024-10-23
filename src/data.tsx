@@ -26,17 +26,55 @@ import img23 from './Portfolio_Images/HackTheBurgh.png'
 export const Experience = [
   {
     id: 1,
+    date: "September 2025 - Present",
+    iconsSrc: <IoCodeWorking />,
+    company: "UBS",
+    title: "Incoming Graduate Software Engineer",
+    location: "London, UK",
+    description:
+      "I will be joining UBS as a Graduate Software Engineer in September 2025"
+  },
+  {
+    id: 2,
+    date: "August 2024 - September 2025",
+    iconsSrc: <IoCodeWorking />,
+    company: "Warwick Data Science Society",
+    title: "Tech Lead",
+    location: "Coventry, UK",
+    description:
+      "I am currently the Tech Lead for the Warwick Data Science Society. My responsibilities include managing the tech team and ensuring that the website is up to date and functioning correctly. I also help organise events and workshops for the society.",
+  },
+  {
+    id: 3,
+    date: "August 2024 - September 2025",
+    iconsSrc: <IoCodeWorking />,
+    company: "Warwick Racing AI",
+    title: "AI Software Engineer",
+    location: "Coventry, UK",
+    description:
+      "I am currently working as an AI Software Engineer for Warwick Racing AI. My responsibilities include developing the AI for the autonomous racing car that will be competing in the Formula Student competition. I am also responsible for developing the simulation environment that will be used to train the AI.",
+  },
+  {
+    id: 4,
+    date: "August 2024 - September 2025",
+    iconsSrc: <IoCodeWorking />,
+    company: "Warwick Trading Society",
+    title: "Quantitative Developer",
+    location: "Coventry, UK",
+    description:
+      "I am currently working as a Quantitative Developer for the Warwick Trading Society. My responsibilities include developing a pairs trading algorithm using machine learning techniques like K-means clustering and PCA.",
+  },
+  {
+    id: 5,
     date: "June 2024 - August 2024",
     iconsSrc: <IoCodeWorking />,
     company: "Morgan Stanley",
     title: "Software Engineer Intern",
     location: "London, UK",
-    description: "I am currently working as a Software Engineer Intern at Morgan Stanley, where I am working in the Client Onboarding and Reference Data Services (CDRT)’ technology team in the Institutional Securities Group (ISG). I am working on a Environment Dashboard, that will allow other developers to see the status of the microservice, provide real time information on that service as well as provided logs and metrics for that service. I am also working on an intern project where we in groups are developing a trading bot that will make simulated trades on the stock market."
-
-
+    description: "Currently worked as a Software Engineer Intern at Morgan Stanley, where I am worked in the Client Onboarding and Reference Data Services (CDRT)’ technology team in the Institutional Securities Group (ISG). I am worked on a Environment Dashboard, that will allow other developers to see the status of the microservice, provide real time information on that service as well as provided logs and metrics for that service. I also worked on an intern project where we in groups are developing a trading bot that will make simulated trades on the stock market."
   },
   {
-    id: 2,
+    id: 6,
     date: "December 2023 - March 2024",
     iconsSrc: <IoCodeWorking />,
     company: "Fliproom",
@@ -46,7 +84,7 @@ export const Experience = [
       "As a Backend Engineer, I specialized in the backend development of Fliproom's sneaker business management platform. My responsibilities included designing, developing, maintaining, and debugging core application logic, databases, and APIs. My work ensures efficient data and application integration, supporting the platform's key features like inventory management, sales tracking, and integration with Shopify. My focus on backend processes enhances the platform's performance and reliability in the dynamic footwear and high-fashion industry."
   },
   {
-    id: 3,
+    id: 7,
     date: "July 2023 - June 2024",
     iconsSrc: <IoCodeWorking />,
     company: "Hewlett Packard Enterprise",
@@ -56,7 +94,7 @@ export const Experience = [
       "Worked alongside the 'Origin' scrum team in full-stack application development, empowering product managers to release customer notices through a sturdy Golang microservice paired with a dynamic React interface. Employed Jenkins pipelines for smooth build, test, and deploy processes, making use of AWS-based Kubernetes clusters and Helm for expandable infrastructure. Adopted React reducers, context API, and Mirage for efficient UI state control and backend simulation, upholding superior code standards using Jest and Cypress tests",
   },
   {
-    id: 4,
+    id: 8,
     date: "March 2023 - April 2023",
     iconsSrc: <IoCodeWorking />,
     company: "JP Morgan Chase",
@@ -64,10 +102,9 @@ export const Experience = [
     location: "London, UK",
     description:
       "During my spring internship, I gained TDD proficiency in Spring Boot and JUnit, and expanded my knowledge in cybersecurity and UI/UX. As part of a team developing a web app for UN Goal 4, I led front-end development using React and TailwindCSS, integrating multiple APIs for a seamless, user-friendly platform.",
-
   },
   {
-    id: 5,
+    id: 9,
     date: "October 2022 - June 2023",
     iconsSrc: <IoCodeWorking />,
     company: "Butterfly",
@@ -77,7 +114,7 @@ export const Experience = [
       "I worked as a Software Engineer at Butterfly, a startup that is developing a social media platform for students to connect with each other and share their experiences. The app is currently only avaiable to Warwick University students but will be rolled out to other universities in the future."
   },
   {
-    id: 6,
+    id: 10,
     date: "July 2022 - August 2022",
     iconsSrc: <IoCodeWorking />,
     company: "Ford Motors",
@@ -87,7 +124,7 @@ export const Experience = [
       "I undertook a summer internship at Ford Motors where I worked with the rapid digital prototype team to develop a prototype for their In-Vehicle Entertainment Project. We built a working prototype of an arcade racing game using Unity and C#. The game is able to interact with the car's sensors and actuators, which is demoed using raspberry pi, arduino and websockets allowing the user to have the ultimate experience of racing the car.",
   },
   {
-    id: 7,
+    id: 11,
     date: "June 2022 - July 2022",
     iconsSrc: <IoCodeWorking />,
     company: "Lloyds Banking Group",
@@ -97,7 +134,7 @@ export const Experience = [
       "I undertook a spring week at Lloyds Banking Group, where I developed my knowledge on the Fintech industry. During, the spring week I used python to develop a program to analysis data of 12000 different simulated bank transactions and then presented any findings to a panel of Lloyds bank employees. I also worked in a group to develop a secure video chat application using the MERN stack which included 2 factor authentication using a random generated password.",
   },
   {
-    id: 8,
+    id: 12,
     date: "July 2021 - August 2021",
     iconsSrc: <IoCodeWorking />,
     company: "Leonardo",
