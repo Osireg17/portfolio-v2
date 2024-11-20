@@ -201,7 +201,15 @@ export const Projects = [
     description: "(In Development) A web application that helps users prepare for their HireVue interviews. The application uses the Gemini API to generate questions that are likely to be asked in the interview. The user can then record their answers to the questions and get feedback on how they can improve their answers. The application also provides tips on how to improve their interview skills.",
     techs: "NextJs, TypeScript, Docker, PostgreSQL, OpenAI API, Drizzle ORM, Clerk Auth, GCP",
     github: "https://github.com/Osireg17/AceYourHireview"
-  },
+  }, {
+    id: 8,
+    name: 'Crypto Trading Application',
+    imageSrc: '',
+    description:
+      '(In Development) A cryptocurrency trading application that allows users to trade various cryptocurrencies. The application uses the Binance API to fetch the latest prices of the cryptocurrencies and then displays them in a table. Users can then buy and sell cryptocurrencies using the application.',
+    techs: 'NextJs, TypeScript, Docker, MySQL, Binance API, Java, Spring Boot',
+    github: "https://github.com/Osireg17/Crypto-Trading-WebApp"
+  }
 ];
 
 export const Hackathons = [
@@ -268,6 +276,18 @@ export const Hackathons = [
     description:
       "At the Encode Club AI Hackathon, I continued developing my AI Learning platform as a solo developer. I added a quiz feature to test users' understanding of the YouTube videos, as well as a summary feature. Moving forward, I plan to introduce a summary quiz that assesses users' overall comprehension of each topic.",
     techs: "NextJs, Prisma, OpenAI, Youtube API, MySQL",
+  }, {
+    id: 11,
+    name: 'Man Group Open Source Hackathon 2024',
+    imageSrc: '',
+    description:
+      'I took part in a one day hackathon hosted by Man Group in where I got to contribute to some open source technology. I worked on two main projects. Finmarketpy is a python library for backtesting trading strategies & analyzing financial markets and findatapy which is a python library to download market data via Bloomberg, Eikon, Quandl, Yahoo etc. I contributed by writing unit test for the backtestengine within the finmarketpy. '
+  }, {
+    id: 12,
+    name: 'QRT Algorithmic Trading Challenge',
+    imageSrc: '',
+    description:
+      'I competed in a portfolio allocation challenge, aiming to maximize portfolio performance by strategically allocating funds across a range of investment strategies.'
   }
 ];
 
