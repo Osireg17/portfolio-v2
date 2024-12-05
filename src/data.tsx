@@ -28,11 +28,11 @@ export const Experience = [
     id: 1,
     date: "September 2025 - Present",
     iconsSrc: <IoCodeWorking />,
-    company: "UBS",
-    title: "Incoming Graduate Software Engineer",
+    company: "Hubspot",
+    title: "Incoming Backend Software Engineer",
     location: "London, UK",
     description:
-      "I will be joining UBS as a Graduate Software Engineer in September 2025"
+      "I will be joining Hubspot as a Backend Software Engineer in June 2025"
   },
   {
     id: 2,
