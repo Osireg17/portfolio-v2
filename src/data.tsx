@@ -21,12 +21,15 @@ import img20 from './Portfolio_Images/video-to-mp3.png'
 import img21 from './Portfolio_Images/Terraria.jpeg'
 import img22 from './Portfolio_Images/Price_tracker.webp'
 import img23 from './Portfolio_Images/HackTheBurgh.png'
+import Algothon from './Portfolio_Images/Algothon.jpg'
+import ManGroup from './Portfolio_Images/ManGroup.png'
+import ICHack2025 from './Portfolio_Images/ICHack_2025.png'
 
 
 export const Experience = [
   {
     id: 1,
-    date: "September 2025 - Present",
+    date: "June 2025 - Present",
     iconsSrc: <IoCodeWorking />,
     company: "Hubspot",
     title: "Incoming Backend Software Engineer",
@@ -36,7 +39,7 @@ export const Experience = [
   },
   {
     id: 2,
-    date: "August 2024 - September 2025",
+    date: "August 2024 - May 2025",
     iconsSrc: <IoCodeWorking />,
     company: "Warwick Data Science Society",
     title: "Tech Lead",
@@ -46,7 +49,7 @@ export const Experience = [
   },
   {
     id: 3,
-    date: "August 2024 - September 2025",
+    date: "August 2024 - May 2025",
     iconsSrc: <IoCodeWorking />,
     company: "Warwick Racing AI",
     title: "AI Software Engineer",
@@ -56,13 +59,13 @@ export const Experience = [
   },
   {
     id: 4,
-    date: "August 2024 - September 2025",
+    date: "August 2024 - December 2024",
     iconsSrc: <IoCodeWorking />,
     company: "Warwick Trading Society",
     title: "Quantitative Developer",
     location: "Coventry, UK",
     description:
-      "I am currently working as a Quantitative Developer for the Warwick Trading Society. My responsibilities include developing a pairs trading algorithm using machine learning techniques like K-means clustering and PCA.",
+      "I am worked as a Quantitative Developer for the Warwick Trading Society. My responsibilities include developing a pairs trading algorithm using machine learning techniques like K-means clustering and PCA.",
   },
   {
     id: 5,
@@ -193,21 +196,13 @@ export const Projects = [
     description: "A web application that allows users to generate personalized courses based on user-specified topics and subtopics. The application utilizes the YouTube API and OpenAI AI to curate relevant videos, transcripts, questions, and notes for each course. Users can save these dynamically generated courses and access them at any time, enabling continuous learning on their chosen subjects. This project was developed during the AstonHack9 Hackathon and AI Encode Hackathon.",
     techs: "NextJs, TypeScript, Docker, PostgreSQL, OpenAI API, Prisma, NextAuth",
     github: "https://www.topictutor.co.uk"
-  },
-  {
-    id: 7,
-    name: "AceYourHireVue",
-    imageSrc: "",
-    description: "(In Development) A web application that helps users prepare for their HireVue interviews. The application uses the Gemini API to generate questions that are likely to be asked in the interview. The user can then record their answers to the questions and get feedback on how they can improve their answers. The application also provides tips on how to improve their interview skills.",
-    techs: "NextJs, TypeScript, Docker, PostgreSQL, OpenAI API, Drizzle ORM, Clerk Auth, GCP",
-    github: "https://github.com/Osireg17/AceYourHireview"
   }, {
-    id: 8,
+    id: 7,
     name: 'Crypto Trading Application',
     imageSrc: '',
     description:
       '(In Development) A cryptocurrency trading application that allows users to trade various cryptocurrencies. The application uses the Binance API to fetch the latest prices of the cryptocurrencies and then displays them in a table. Users can then buy and sell cryptocurrencies using the application.',
-    techs: 'NextJs, TypeScript, Docker, MySQL, Binance API, Java, Spring Boot',
+    techs: 'React, TypeScript, Docker, MySQL, Binance API, Java, Spring Boot',
     github: "https://github.com/Osireg17/Crypto-Trading-WebApp"
   }
 ];
@@ -279,15 +274,22 @@ export const Hackathons = [
   }, {
     id: 11,
     name: 'Man Group Open Source Hackathon 2024',
-    imageSrc: '',
+    imageSrc: ManGroup,
     description:
       'I took part in a one day hackathon hosted by Man Group in where I got to contribute to some open source technology. I worked on two main projects. Finmarketpy is a python library for backtesting trading strategies & analyzing financial markets and findatapy which is a python library to download market data via Bloomberg, Eikon, Quandl, Yahoo etc. I contributed by writing unit test for the backtestengine within the finmarketpy. '
   }, {
     id: 12,
-    name: 'QRT Algorithmic Trading Challenge',
-    imageSrc: '',
+    name: 'Algothon 2024',
+    imageSrc: Algothon,
     description:
       'I competed in a portfolio allocation challenge, aiming to maximize portfolio performance by strategically allocating funds across a range of investment strategies.'
+  },
+  {
+    id: 13,
+    name: 'IC Hack 2025',
+    imageSrc: ICHack2025,
+    description:
+      'At IC Hack 2025, I participated in Optivers market making challenge, developing an algorithmic trading system that traded semiconductor stocks and ETFs across US and EU markets. I built automated strategies to capitalize on price differences between exchanges, implemented market making logic, and managed complex risk parameters while staying within strict position and trading frequency limits.'
   }
 ];
 
