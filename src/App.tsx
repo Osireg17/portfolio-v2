@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Spline from '@splinetool/react-spline';
-import pdf from './CV/Osiregbemhe_Obomighie_US_Grad copy.pdf'
+import pdf from './CV/Osiregbemhe_Obomighie_UK.pdf'
 import { IoMenu, IoLogoGithub } from 'react-icons/io5'
 import { RxCrossCircled } from 'react-icons/rx'
 import { Experience, Projects, SocialLinks, Hackathons, Skills } from "./data";
@@ -8,7 +7,18 @@ import { AnimatePresence, motion } from "framer-motion";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import "react-vertical-timeline-component/style.min.css";
 import ReadMore from './ReadMore';
-import Typewriter from 'typewriter-effect';
+import hubspotLogo from './images/Company_Logos/HubSpot_Logo.png';
+import hpeLogo from './images/Company_Logos/HPE_Logo.avif';
+import jpMorganLogo from './images/Company_Logos/JP_Morgan_Logo.jpg';
+import morganStanleyLogo from './images/Company_Logos/Morgan_Stanley_Logo.png';
+import fordLogo from './images/Company_Logos/Ford_Company_logo.jpg';
+const logoMap: Record<string, string> = {
+  hubspot: hubspotLogo,
+  hpe: hpeLogo,
+  jpmorgan: jpMorganLogo,
+  morganstanley: morganStanleyLogo,
+  ford: fordLogo,
+};
 
 const SectionHeading = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-center gap-4 mb-12 w-full">
@@ -19,18 +29,28 @@ const SectionHeading = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-const CompanyBadge = ({ initials, color }: { initials: string; color: string }) => (
-  <div
-    className="w-8 h-8 rounded-md flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-    style={{ backgroundColor: color }}
-  >
-    {initials}
-  </div>
-);
+const CompanyBadge = ({ initials, color, logoKey }: { initials: string; color: string; logoKey?: string }) => {
+  const logoSrc = logoKey ? logoMap[logoKey] : null;
+  return (
+    <div
+      className="w-8 h-8 rounded-md flex items-center justify-center flex-shrink-0 overflow-hidden"
+      style={{ backgroundColor: logoSrc ? "#ffffff" : color }}
+    >
+      {logoSrc
+        ? <img src={logoSrc} alt="" className="w-full h-full object-contain p-1" />
+        : <span className="text-xs font-bold text-white">{initials}</span>
+      }
+    </div>
+  );
+};
 
-const ProjectPlaceholder = ({ label }: { label: string }) => (
-  <div className="w-full h-[160px] rounded-md my-4 bg-surface border border-border flex items-center justify-center">
-    <span className="text-sm text-textSecondary font-mono">{label}</span>
+const TechPills = ({ techs }: { techs: string }) => (
+  <div className="flex flex-wrap gap-1.5">
+    {techs.split(',').map((t) => (
+      <span key={t.trim()} className="text-xs text-textSecondary bg-primary border border-border px-2 py-0.5 rounded-md font-mono">
+        {t.trim()}
+      </span>
+    ))}
   </div>
 );
 
@@ -124,29 +144,71 @@ function App() {
         </nav>
 
         {/* Hero */}
-        <div className="w-screen h-screen flex flex-col items-center justify-center relative" id="home">
-          <Spline scene="https://prod.spline.design/V8fVYCI-HhjhVe6E/scene.splinecode" />
-          <div className="absolute bottom-10 w-full flex justify-center items-center">
-            <div className="p-3 px-5 flex items-center justify-center bg-surface border border-border rounded-2xl">
-              <p className="text-sm text-textSecondary">Press and drag to orbit</p>
-            </div>
+        <div className="w-screen min-h-screen flex flex-col items-center justify-center relative overflow-hidden" id="home">
+          {/* Dot grid background */}
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle, #30363d 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+            opacity: 0.5,
+          }} />
+          {/* Radial glow */}
+          <div className="absolute inset-0" style={{
+            background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(59,130,246,0.08) 0%, transparent 70%)',
+          }} />
+
+          <div className="relative flex flex-col items-center justify-center gap-6 px-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              <h1
+                className="text-5xl md:text-7xl font-bold tracking-tight leading-tight"
+                style={{
+                  background: 'linear-gradient(135deg, #e6edf3 40%, #3b82f6 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Osi Obomighie
+              </h1>
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+              className="text-lg md:text-xl text-textSecondary max-w-lg leading-relaxed"
+            >
+              Software Engineer at HubSpot. Building distributed systems and backend infrastructure.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              className="flex items-center gap-4 mt-2"
+            >
+              <a
+                href="#about"
+                className="text-sm text-textPrimary bg-accent px-5 py-2.5 rounded-lg font-medium hover:bg-blue-500 duration-150"
+              >
+                Learn more
+              </a>
+              <a
+                href={pdf}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-textSecondary border border-border px-5 py-2.5 rounded-lg font-medium hover:border-textSecondary hover:text-textPrimary duration-150"
+              >
+                Download CV
+              </a>
+            </motion.div>
           </div>
         </div>
 
         <main className="w-[85%] max-w-5xl mt-4">
-
-          {/* Intro */}
-          <div className="flex flex-col items-center justify-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-center text-textPrimary leading-tight">
-              <Typewriter
-                options={{
-                  strings: ["Hi, I'm Osi Obomighie", "Backend Software Engineer", "Basketball Enthusiast"],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </h1>
-          </div>
 
           {/* About */}
           <section className="w-full my-24" id="about">
@@ -227,7 +289,7 @@ function App() {
                     alignItems: "center",
                     justifyContent: "center",
                   }}
-                  icon={<CompanyBadge initials={n.badge} color={n.badgeColor} />}
+                  icon={<CompanyBadge initials={n.badge} color={n.badgeColor} logoKey={n.logoKey} />}
                 >
                   <div className="flex flex-col gap-1 mb-3">
                     <h2 className="text-base font-semibold text-textPrimary m-0">{n.company}</h2>
@@ -253,21 +315,26 @@ function App() {
               {Projects.map((n, i) => (
                 <motion.div
                   key={n.id}
-                  className={`border border-border rounded-xl p-4 w-full sm:w-[300px] hover:border-textSecondary duration-150 ease-in-out flex flex-col ${projectExpanded[i] ? 'h-auto' : 'h-[420px]'}`}
+                  className={`border border-border rounded-xl p-5 w-full sm:w-[300px] hover:border-textSecondary duration-150 ease-in-out flex flex-col gap-3 ${projectExpanded[i] ? 'h-auto' : n.imageSrc ? 'h-[420px]' : 'h-[280px]'}`}
                   style={{ background: "#161b22" }}
                 >
-                  <p className="text-sm font-semibold text-textPrimary uppercase tracking-wide mb-1">
-                    {n.name.length > 28 ? `${n.name.slice(0, 28)}...` : n.name}
-                  </p>
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="text-sm font-semibold text-textPrimary leading-snug">
+                      {n.name}
+                    </p>
+                    <a href={n.github} target="_blank" rel="noreferrer" className="flex-shrink-0">
+                      <motion.div whileTap={{ scale: 0.7 }}>
+                        <IoLogoGithub className="text-textSecondary text-lg cursor-pointer hover:text-textPrimary duration-150" />
+                      </motion.div>
+                    </a>
+                  </div>
 
-                  {n.imageSrc ? (
+                  {n.imageSrc && (
                     <img
                       src={n.imageSrc}
-                      className="w-full h-[160px] object-cover rounded-md my-3"
+                      className="w-full h-[150px] object-cover rounded-md"
                       alt={n.name}
                     />
-                  ) : (
-                    <ProjectPlaceholder label={n.placeholderLabel ?? n.name} />
                   )}
 
                   <p className="text-sm text-textSecondary leading-relaxed flex-1">
@@ -280,15 +347,8 @@ function App() {
                     </ReadMore>
                   </p>
 
-                  <div className="flex items-end justify-between mt-3 pt-3 border-t border-border">
-                    <p className="text-xs text-textSecondary font-mono leading-relaxed max-w-[220px]">
-                      {n.techs}
-                    </p>
-                    <a href={n.github} target="_blank" rel="noreferrer">
-                      <motion.div whileTap={{ scale: 0.7 }}>
-                        <IoLogoGithub className="text-textSecondary text-xl cursor-pointer hover:text-textPrimary duration-150" />
-                      </motion.div>
-                    </a>
+                  <div className="pt-3 border-t border-border">
+                    <TechPills techs={n.techs} />
                   </div>
                 </motion.div>
               ))}
@@ -302,16 +362,16 @@ function App() {
               {Hackathons.map((n, i) => (
                 <motion.div
                   key={n.id}
-                  className={`border border-border rounded-xl p-4 w-full sm:w-[300px] hover:border-textSecondary duration-150 ease-in-out flex flex-col ${hackathonExpanded[i] ? 'h-auto' : 'h-[380px]'}`}
+                  className={`border border-border rounded-xl p-5 w-full sm:w-[300px] hover:border-textSecondary duration-150 ease-in-out flex flex-col gap-3 ${hackathonExpanded[i] ? 'h-auto' : 'h-[380px]'}`}
                   style={{ background: "#161b22" }}
                 >
-                  <p className="text-sm font-semibold text-textPrimary uppercase tracking-wide mb-1">
-                    {n.name.length > 28 ? `${n.name.slice(0, 28)}...` : n.name}
+                  <p className="text-sm font-semibold text-textPrimary leading-snug">
+                    {n.name}
                   </p>
 
                   <img
                     src={n.imageSrc}
-                    className="w-full h-[140px] object-cover rounded-md my-3"
+                    className="w-full h-[140px] object-cover rounded-md"
                     alt={n.name}
                   />
 
@@ -325,10 +385,8 @@ function App() {
                     </ReadMore>
                   </p>
 
-                  <div className="mt-3 pt-3 border-t border-border">
-                    <p className="text-xs text-textSecondary font-mono leading-relaxed">
-                      {n.techs}
-                    </p>
+                  <div className="pt-3 border-t border-border">
+                    <TechPills techs={n.techs} />
                   </div>
                 </motion.div>
               ))}
