@@ -1,10 +1,7 @@
 import {
-  IoCodeWorking,
   IoLogoGithub,
   IoLogoLinkedin,
 } from "react-icons/io5";
-
-
 
 import img7 from './Portfolio_Images/AC-Hack.webp'
 import img8 from './Portfolio_Images/Code-for-good.webp'
@@ -13,198 +10,248 @@ import img10 from './Portfolio_Images/My project-1 (2).jpg'
 import img11 from './Portfolio_Images/IC Hack.jpeg'
 import img15 from './Portfolio_Images/ICHack.jpeg'
 import topicTutor from './Portfolio_Images/TopicTutor.png'
-// import img16 from './Portfolio_Images/Royal-Hackaway.jpeg'
 import img17 from './Portfolio_Images/AstonHack.png'
 import img18 from './Portfolio_Images/AI_Hackathon.jpeg'
 import img19 from './Portfolio_Images/Random-Bible-Verse-Generator.png'
 import img20 from './Portfolio_Images/video-to-mp3.png'
-import img21 from './Portfolio_Images/Terraria.jpeg'
 import img22 from './Portfolio_Images/Price_tracker.webp'
 import img23 from './Portfolio_Images/HackTheBurgh.png'
 import Algothon from './Portfolio_Images/Algothon.jpg'
 import ManGroup from './Portfolio_Images/ManGroup.png'
 import ICHack2025 from './Portfolio_Images/ICHack_2025.png'
 
+export const Skills = {
+  languages: ["Java", "Python", "Golang", "TypeScript", "C++"],
+  technologies: ["MySQL", "Kafka", "Docker", "Spring", "React", "PostgreSQL", "Redis", "RabbitMQ", "gRPC", "Kubernetes"],
+};
 
 export const Experience = [
   {
     id: 1,
-    date: "June 2025 - Present",
-    iconsSrc: <IoCodeWorking />,
-    company: "Hubspot",
-    title: "Incoming Backend Software Engineer",
+    date: "June 2025 — Present",
+    badge: "HS",
+    badgeColor: "#ff7a59",
+    company: "HubSpot",
+    title: "Software Engineer",
     location: "London, UK",
-    description:
-      "I will be joining Hubspot as a Backend Software Engineer in June 2025"
+    bullets: [
+      "Reduced cross-region request latency by 50% migrating a critical playlist service to multi-region architecture as sole backend owner, executing a zero-downtime distributed ID migration, REST-to-RPC transition, and Kafka-based synchronisation.",
+      "Built a data validation framework to verify a 1.7B row user progress migration, creating a 4-module evaluation suite with a field-level comparator engine achieving a 99.95% match rate across 168K+ compared records.",
+      "Built an AI-powered playlist generation feature enabling trainers to create personalised learning paths from natural language prompts, designing a content search RPC endpoint with parallel async search strategy for mixed-content edge cases.",
+    ],
   },
   {
     id: 2,
-    date: "August 2024 - May 2025",
-    iconsSrc: <IoCodeWorking />,
+    date: "August 2024 — May 2025",
+    badge: "WD",
+    badgeColor: "#3b82f6",
     company: "Warwick Data Science Society",
     title: "Tech Lead",
     location: "Coventry, UK",
-    description:
-      "I am currently the Tech Lead for the Warwick Data Science Society. My responsibilities include managing the tech team and ensuring that the website is up to date and functioning correctly. I also help organise events and workshops for the society.",
+    bullets: [
+      "Led the tech team managing the society website and ensuring it remained up to date and functioning. Organised events and workshops for the society.",
+    ],
   },
   {
     id: 3,
-    date: "August 2024 - May 2025",
-    iconsSrc: <IoCodeWorking />,
+    date: "August 2024 — May 2025",
+    badge: "WR",
+    badgeColor: "#8b5cf6",
     company: "Warwick Racing AI",
     title: "AI Software Engineer",
     location: "Coventry, UK",
-    description:
-      "I am currently working as an AI Software Engineer for Warwick Racing AI. My responsibilities include developing the AI for the autonomous racing car that will be competing in the Formula Student competition. I am also responsible for developing the simulation environment that will be used to train the AI.",
+    bullets: [
+      "Developed AI for an autonomous racing car competing in the Formula Student competition, including the simulation environment used for training.",
+    ],
   },
   {
     id: 4,
-    date: "August 2024 - December 2024",
-    iconsSrc: <IoCodeWorking />,
+    date: "August 2024 — December 2024",
+    badge: "WT",
+    badgeColor: "#10b981",
     company: "Warwick Trading Society",
     title: "Quantitative Developer",
     location: "Coventry, UK",
-    description:
-      "I am worked as a Quantitative Developer for the Warwick Trading Society. My responsibilities include developing a pairs trading algorithm using machine learning techniques like K-means clustering and PCA.",
+    bullets: [
+      "Developed a pairs trading algorithm using K-means clustering and PCA to identify correlated assets and generate trading signals.",
+    ],
   },
   {
     id: 5,
-    date: "June 2024 - August 2024",
-    iconsSrc: <IoCodeWorking />,
+    date: "June 2024 — August 2024",
+    badge: "MS",
+    badgeColor: "#1e40af",
     company: "Morgan Stanley",
     title: "Software Engineer Intern",
     location: "London, UK",
-    description: "Currently worked as a Software Engineer Intern at Morgan Stanley, where I am worked in the Client Onboarding and Reference Data Services (CDRT)’ technology team in the Institutional Securities Group (ISG). I am worked on a Environment Dashboard, that will allow other developers to see the status of the microservice, provide real time information on that service as well as provided logs and metrics for that service. I also worked on an intern project where we in groups are developing a trading bot that will make simulated trades on the stock market."
+    bullets: [
+      "Developed a Non-Production Environment Dashboard using Angular and Java/Spring Boot APIs, enhancing observability for 450+ developers across 40+ teams.",
+      "Integrated Jenkins jobs to automate periodic data retrieval from an in-house container system, ensuring real-time status updates across DEV, UAT, and QA environments.",
+    ],
   },
   {
     id: 6,
-    date: "December 2023 - March 2024",
-    iconsSrc: <IoCodeWorking />,
+    date: "December 2023 — March 2024",
+    badge: "FL",
+    badgeColor: "#f59e0b",
     company: "Fliproom",
     title: "Software Engineer Intern",
     location: "London, UK",
-    description:
-      "As a Backend Engineer, I specialized in the backend development of Fliproom's sneaker business management platform. My responsibilities included designing, developing, maintaining, and debugging core application logic, databases, and APIs. My work ensures efficient data and application integration, supporting the platform's key features like inventory management, sales tracking, and integration with Shopify. My focus on backend processes enhances the platform's performance and reliability in the dynamic footwear and high-fashion industry."
+    bullets: [
+      "Specialised in backend development of Fliproom's sneaker business management platform, designing core application logic, databases, and APIs integrating with Shopify.",
+    ],
   },
   {
     id: 7,
-    date: "July 2023 - June 2024",
-    iconsSrc: <IoCodeWorking />,
+    date: "July 2023 — June 2024",
+    badge: "HP",
+    badgeColor: "#0ea5e9",
     company: "Hewlett Packard Enterprise",
     title: "Software Engineer Intern",
     location: "Bristol, UK",
-    description:
-      "Worked alongside the 'Origin' scrum team in full-stack application development, empowering product managers to release customer notices through a sturdy Golang microservice paired with a dynamic React interface. Employed Jenkins pipelines for smooth build, test, and deploy processes, making use of AWS-based Kubernetes clusters and Helm for expandable infrastructure. Adopted React reducers, context API, and Mirage for efficient UI state control and backend simulation, upholding superior code standards using Jest and Cypress tests",
+    bullets: [
+      "Designed and implemented the update announcement feature with a REST API endpoint using Golang, achieving 80% test coverage.",
+      "Engineered the publish announcement feature integrating a Golang-based gRPC server adapter with over 80% test coverage.",
+      "Enhanced deployment reliability through Docker images for functional tests and Jenkins-automated build and push processes.",
+    ],
   },
   {
     id: 8,
-    date: "March 2023 - April 2023",
-    iconsSrc: <IoCodeWorking />,
+    date: "March 2023 — April 2023",
+    badge: "JP",
+    badgeColor: "#374151",
     company: "JP Morgan Chase",
-    title: "Software Engineer - Spring Intern",
+    title: "Software Engineer — Spring Intern",
     location: "London, UK",
-    description:
-      "During my spring internship, I gained TDD proficiency in Spring Boot and JUnit, and expanded my knowledge in cybersecurity and UI/UX. As part of a team developing a web app for UN Goal 4, I led front-end development using React and TailwindCSS, integrating multiple APIs for a seamless, user-friendly platform.",
+    bullets: [
+      "Led front-end development using React and TailwindCSS for a web app targeting UN Goal 4, integrating multiple APIs as part of a team of five.",
+    ],
   },
   {
     id: 9,
-    date: "October 2022 - June 2023",
-    iconsSrc: <IoCodeWorking />,
+    date: "October 2022 — June 2023",
+    badge: "BF",
+    badgeColor: "#6366f1",
     company: "Butterfly",
     title: "Software Engineer",
     location: "Coventry, UK",
-    description:
-      "I worked as a Software Engineer at Butterfly, a startup that is developing a social media platform for students to connect with each other and share their experiences. The app is currently only avaiable to Warwick University students but will be rolled out to other universities in the future."
+    bullets: [
+      "Built features for a social media platform for Warwick University students, working across the full stack.",
+    ],
   },
   {
     id: 10,
-    date: "July 2022 - August 2022",
-    iconsSrc: <IoCodeWorking />,
-    company: "Ford Motors",
+    date: "July 2022 — August 2022",
+    badge: "FM",
+    badgeColor: "#2563eb",
+    company: "Ford Motor Company",
     title: "Software Engineer Intern",
     location: "London, UK",
-    description:
-      "I undertook a summer internship at Ford Motors where I worked with the rapid digital prototype team to develop a prototype for their In-Vehicle Entertainment Project. We built a working prototype of an arcade racing game using Unity and C#. The game is able to interact with the car's sensors and actuators, which is demoed using raspberry pi, arduino and websockets allowing the user to have the ultimate experience of racing the car.",
+    bullets: [
+      "Architected a 4DX racing game for Ford's Sync System using Unity, C#, Python, and C/C++, achieving a 60% reduction in latency through low-level programming optimisations.",
+      "Implemented advanced graphics rendering techniques resulting in a 40% improvement in frame rates.",
+    ],
   },
   {
     id: 11,
-    date: "June 2022 - July 2022",
-    iconsSrc: <IoCodeWorking />,
+    date: "June 2022 — July 2022",
+    badge: "LB",
+    badgeColor: "#166534",
     company: "Lloyds Banking Group",
     title: "Software Engineer Intern",
     location: "London, UK",
-    description:
-      "I undertook a spring week at Lloyds Banking Group, where I developed my knowledge on the Fintech industry. During, the spring week I used python to develop a program to analysis data of 12000 different simulated bank transactions and then presented any findings to a panel of Lloyds bank employees. I also worked in a group to develop a secure video chat application using the MERN stack which included 2 factor authentication using a random generated password.",
+    bullets: [
+      "Analysed 12,000 simulated bank transactions using Python and presented findings to a panel of Lloyds employees.",
+      "Built a secure video chat application with 2FA using the MERN stack.",
+    ],
   },
   {
     id: 12,
-    date: "July 2021 - August 2021",
-    iconsSrc: <IoCodeWorking />,
+    date: "July 2021 — August 2021",
+    badge: "LN",
+    badgeColor: "#4b5563",
     company: "Leonardo",
     title: "Technology Intern",
     location: "Remote",
-    description:
-      "During this experience with Leonardo, I undertook a project to use python to program a raspberry pi to control a small robot to move around a room without bumping into any obstacles. The robot was able to move around the room using a combination of the motors and the infrared sensors. I also shadowed senior software engineers to deepen my understanding of the software development process.",
+    bullets: [
+      "Programmed a Raspberry Pi in Python to autonomously navigate a robot around obstacles using motor and infrared sensor control.",
+    ],
   },
 ];
 
 export const Projects = [
   {
     id: 1,
-    name: "Fellow",
-    imageSrc: img10,
-    description: "I developed a social media app where Christians can come and ask about their faith as well as provide their own opinion on the word of God. Click the link below to view the website and sign up for early access.",
-    techs: "React Native, Firebase, Typescript, Google Cloud Platform",
-    github: "https://fellow-web.vercel.app/",
+    name: "Agentic Bidding Platform",
+    imageSrc: null,
+    placeholderLabel: "Go · RabbitMQ · Redis",
+    description: "A distributed, microservices-based AI bidding platform using Go with dedicated services for auctions, bidding, and autonomous bot agents. Architected an autonomous bot agent service that monitors real-time auction snapshots and executes strategic bids based on personality-specific logic and remaining budget.",
+    techs: "Golang, Google ADK, PostgreSQL, RabbitMQ, Redis, React",
+    github: "https://github.com/Osireg17/AI-Bidding-Platform",
   },
   {
     id: 2,
-    name: "Bible Verse Image Generator",
-    imageSrc: img19,
-    description: "A web application that allows users to generate images of bible verses. The application uses the Bible API to fetch the bible verses and then uses the Unsplash API to fetch images, then creates a nice downloadable image which can be used for personal use.",
-    techs: "NextJs, Typescript, Bible API, AWS Services, Unsplash API",
-    github: "https://prod.d3bl58w44ip2gh.amplifyapp.com/"
+    name: "AI Code Reviewer",
+    imageSrc: null,
+    placeholderLabel: "FastAPI · Pinecone · LangChain",
+    description: "An event-driven code review system using FastAPI and GitHub webhooks, integrating a tool-calling agent to autonomously analyse code changes and provide pull request suggestions. Integrated a vector database using Pinecone and OpenAI embeddings to create a searchable knowledge base of coding standards with semantic search across multiple languages.",
+    techs: "FastAPI, Pydantic, Pinecone, LangChain, OpenAI, Redis",
+    github: "https://github.com/Osireg17/AI-Code-Reviewer",
   },
   {
     id: 3,
-    name: "Youtube Video to Audio Converter",
-    imageSrc: img20,
-    description: "A microservice application that allows users to convert youtube videos to mp3 files and then download them. The application has three microservices that handle the different parts of the application. The first service is the authenication application, the second service is the youtube video to mp3 converter and the third service is the download service.",
-    techs: "Python, Flask, Docker, Kubernetes, MySQL, MongoDB, RabbitMQ",
-    github: "https://github.com/Osireg17/video_to_mp3"
+    name: "Kingdom Code",
+    imageSrc: img9,
+    placeholderLabel: null,
+    description: "A self-improving AI content generation system integrating OpenAI API with an automated feedback loop, enabling prompt regeneration based on user sentiment and reducing poor-quality AI responses. Architected ReadServiceV2 with Bolls.Life API integration and comprehensive caching strategy for consistent scripture content delivery.",
+    techs: "Kotlin, Spring Boot, OpenAI API, Redis, PostgreSQL",
+    github: "https://github.com/Osireg17",
   },
   {
     id: 4,
-    name: "Terraria Pygame Clone",
-    imageSrc: img21,
-    description: "A clone of the popular game Terraria. The game is developed using the Pygame library and is a 2D game that allows the user to explore the world and build structures. No real motivation behind it, purely did it out of fun and to learn pygame",
-    techs: "Python, Pygame",
-    github: "https://github.com/Osireg17/Terraria-Pygame-Clone"
+    name: "Fellow",
+    imageSrc: img10,
+    placeholderLabel: null,
+    description: "A social media app where Christians can ask questions about their faith and share their own perspectives on scripture. Built with React Native and Firebase, available via early access sign-up.",
+    techs: "React Native, Firebase, TypeScript, Google Cloud Platform",
+    github: "https://fellow-web.vercel.app/",
   },
   {
     id: 5,
-    name: "Amazon Price Tracker",
-    imageSrc: img22,
-    description: "A Django web application that allows users to track the price of items on Amazon. This is done through web scraping and searching for the product name and price. This has come in hand multiple times, escpecially around relative's birthdays and Christmas.",
-    techs: "Python, Django, SQLite",
-    github: "https://github.com/Osireg17/Amazon-Price-Tracker"
+    name: "Youtube Video to Audio Converter",
+    imageSrc: img20,
+    placeholderLabel: null,
+    description: "A microservice application that converts YouTube videos to MP3 files. Three services handle authentication, conversion, and download respectively, communicating via RabbitMQ with Kubernetes orchestration.",
+    techs: "Python, Flask, Docker, Kubernetes, MySQL, MongoDB, RabbitMQ",
+    github: "https://github.com/Osireg17/Youtube-Converter",
   },
   {
     id: 6,
     name: "Topic Tutor",
     imageSrc: topicTutor,
-    description: "A web application that allows users to generate personalized courses based on user-specified topics and subtopics. The application utilizes the YouTube API and OpenAI AI to curate relevant videos, transcripts, questions, and notes for each course. Users can save these dynamically generated courses and access them at any time, enabling continuous learning on their chosen subjects. This project was developed during the AstonHack9 Hackathon and AI Encode Hackathon.",
-    techs: "NextJs, TypeScript, Docker, PostgreSQL, OpenAI API, Prisma, NextAuth",
-    github: "https://www.topictutor.co.uk"
-  }, {
+    placeholderLabel: null,
+    description: "A web application that generates personalised courses from user-specified topics. Uses the YouTube API and OpenAI to curate relevant videos, transcripts, questions, and notes. Developed at AstonHack9 and the AI Encode Hackathon.",
+    techs: "Next.js, TypeScript, Docker, PostgreSQL, OpenAI API, Prisma, NextAuth",
+    github: "https://www.topictutor.co.uk",
+  },
+  {
     id: 7,
-    name: 'Crypto Trading Application',
-    imageSrc: '',
-    description:
-      '(In Development) A cryptocurrency trading application that allows users to trade various cryptocurrencies. The application uses the Binance API to fetch the latest prices of the cryptocurrencies and then displays them in a table. Users can then buy and sell cryptocurrencies using the application.',
-    techs: 'React, TypeScript, Docker, MySQL, Binance API, Java, Spring Boot',
-    github: "https://github.com/Osireg17/Crypto-Trading-WebApp"
-  }
+    name: "Bible Verse Image Generator",
+    imageSrc: img19,
+    placeholderLabel: null,
+    description: "A web application that generates downloadable images of Bible verses, combining the Bible API for verse content with the Unsplash API for background images.",
+    techs: "Next.js, TypeScript, Bible API, AWS Amplify, Unsplash API",
+    github: "https://prod.d3bl58w44ip2gh.amplifyapp.com/",
+  },
+  {
+    id: 8,
+    name: "Amazon Price Tracker",
+    imageSrc: img22,
+    placeholderLabel: null,
+    description: "A Django web application that tracks prices of Amazon products through web scraping, alerting users when prices drop to their target threshold.",
+    techs: "Python, Django, SQLite",
+    github: "https://github.com/Osireg17/Amazon-Price-Tracker",
+  },
 ];
 
 export const Hackathons = [
@@ -212,181 +259,101 @@ export const Hackathons = [
     id: 1,
     name: "Imperial ACS Hackathon 2023",
     imageSrc: img7,
-    description: "Competed in Imperial College London AC Hack, where I worked with other liked minded individuals to develop a web application that allows users to keep track of their mood and suggest activities that they can do to improve their mood during the day",
-    techs: "React, Apache Spark, Python, Flask, Tensorflow, Pytorch ",
+    description: "Developed a web application to track mood and suggest activities to improve it throughout the day.",
+    techs: "React, Apache Spark, Python, Flask, TensorFlow, PyTorch",
   },
   {
     id: 2,
-    name: "JP Morgan Code for Good Hackathon 2023",
+    name: "JP Morgan Code for Good 2023",
     imageSrc: img8,
-    description: "Won the JP Morgan Code for Good Hackathon, where I worked with 4 other developers to develop a social media app to allow for deafblind people to have a more inclusive social media experience.",
-    techs: "Flutter, Firebase, Dart, Google API's",
+    description: "Won the JP Morgan Code for Good Hackathon, building a social media app for a more inclusive experience for deafblind people.",
+    techs: "Flutter, Firebase, Dart, Google APIs",
   },
   {
     id: 3,
-    name: "Kingdom Code: Build Hackathon 2023",
+    name: "Kingdom Code: Build 2023",
     imageSrc: img9,
-    description: "1st place in Kingdom Code: Build. This christian hackathon was hosted so that we could create technical solutions to help charities which glorify God. I worked on a team that helped develop a web application that would help foodbanks organise their inventory and help them keep track of their donations.",
-    techs: "React, Typescript, GraphQL, Strapi, PostgreSQL",
+    description: "1st place. Built a web application to help foodbanks organise inventory and track donations.",
+    techs: "React, TypeScript, GraphQL, Strapi, PostgreSQL",
   },
   {
     id: 4,
     name: "IC Hack 2023",
     imageSrc: img11,
-    description: "Secured a top 10 position in the Optiver Sponsor Challenge at ICHack by creating an advanced trading bot that would take historical data of several stocks, developed a statistical arbitrage strategy that was implemented on the Optibook exchange.. Leveraged machine learning techniques on AWS EC2 for immediate market insights and strategic high-frequency trades.",
-    techs: "Optibook Python, Numpy, Pandas",
+    description: "Top 10 in the Optiver Sponsor Challenge. Built a statistical arbitrage trading bot using historical stock data and machine learning on AWS EC2.",
+    techs: "Python, NumPy, Pandas, Optibook API",
   },
   {
     id: 5,
-    name: "Kingdom Code: Build Hackathon 2024",
+    name: "Kingdom Code: Build 2024",
     imageSrc: img10,
-    description: "I returned to Kingdom Code Build 2024, not as a developer helping other people improve their projects, but as a project lead. I led a team of 5 to help refactor and redesign the UI of the mobile application that I had been working on. I also implemented a chat feature that allowed people to communicate between themselves.",
-    techs: "React Native, Firebase, Typescript, Google Cloud Platform",
+    description: "Returned as project lead for a team of 5, refactoring and redesigning the UI of a mobile application and implementing a real-time chat feature.",
+    techs: "React Native, Firebase, TypeScript, Google Cloud Platform",
+  },
+  {
+    id: 6,
+    name: "IC Hack 2024",
+    imageSrc: img15,
+    description: "Top 5 in the Marshall Wace Sponsor Challenge. Built 'QuizQPT', a web app generating on-demand past papers for teachers and students. Led development of the DSL interpreter transforming text prompts into diagrams.",
+    techs: "React, TypeScript, Supabase, GPT-4, Express.js",
   },
   {
     id: 7,
-    name: "IC Hack 2024",
-    imageSrc: img15,
-    description: "Participated in IC Hack 2024, where I took part in the Marshall Wace Sponsor Challenge. Our challenge involved creating an innovative learning platform. In a team of six, we developed 'QuizQPT', a web application designed to generate on-demand past papers, providing teachers and students with endless revision resources. My role focused on developing the DSLInterpreter for the backend, which transformed text-based prompts into diagrams for inclusion in the past papers. Our project was among the top 5 in the Marshall Wace Sponsor Challenge.",
-    techs: "React, Typescript, Supabase, GPT-4, ExpressJs",
+    name: "AstonHack 9",
+    imageSrc: img17,
+    description: "Started building Topic Tutor — a full-stack application generating personalised courses from user-specified topics using the YouTube API and OpenAI.",
+    techs: "Next.js, Prisma, OpenAI, YouTube API, MySQL",
   },
   {
     id: 8,
-    name: "AstonHack9",
-    imageSrc: img17,
-    description: "At AstonHack9, I started developing a full-stack application that generates personalized courses based on user-specified topics and subtopics. The application utilizes the YouTube API and OpenAI AI to curate relevant videos, transcripts, questions, and notes for each course. Users can save these dynamically generated courses and access them at any time, enabling continuous learning on their chosen subjects.",
-    techs: "NextJs, Prisma, OpenAI, Youtube API, MySQL",
+    name: "HackTheBurgh 2024",
+    imageSrc: img23,
+    description: "Won the Optiver challenge. Engineered a trading bot using sentiment analysis to dynamically adapt to abrupt market fluctuations triggered by news events.",
+    techs: "Python, Pandas, NumPy, Optibook API",
   },
   {
     id: 9,
-    name: "HackTheBurgh 2024",
-    imageSrc: img23,
-    description: "Secured victory in the Optiver challenge at HackTheBurgh 2024, collaborating with three fellow developers. We engineered a trading bot leveraging sentiment analysis to dynamically adapt to abrupt market fluctuations triggered by news events, aiming to mitigate potential significant losses.",
-    techs: "Python, Pandas, Numpy, Optibook API",
+    name: "Encode Club AI Hackathon",
+    imageSrc: img18,
+    description: "Extended Topic Tutor solo, adding a quiz feature to test understanding of YouTube videos and a summary feature.",
+    techs: "Next.js, Prisma, OpenAI, YouTube API, MySQL",
   },
   {
     id: 10,
-    name: "Encode Club AI Hackathon",
-    imageSrc: img18,
-    description:
-      "At the Encode Club AI Hackathon, I continued developing my AI Learning platform as a solo developer. I added a quiz feature to test users' understanding of the YouTube videos, as well as a summary feature. Moving forward, I plan to introduce a summary quiz that assesses users' overall comprehension of each topic.",
-    techs: "NextJs, Prisma, OpenAI, Youtube API, MySQL",
-  }, {
-    id: 11,
-    name: 'Man Group Open Source Hackathon 2024',
+    name: "Man Group Open Source Hackathon 2024",
     imageSrc: ManGroup,
-    description:
-      'I took part in a one day hackathon hosted by Man Group in where I got to contribute to some open source technology. I worked on two main projects. Finmarketpy is a python library for backtesting trading strategies & analyzing financial markets and findatapy which is a python library to download market data via Bloomberg, Eikon, Quandl, Yahoo etc. I contributed by writing unit test for the backtestengine within the finmarketpy. '
-  }, {
-    id: 12,
-    name: 'Algothon 2024',
-    imageSrc: Algothon,
-    description:
-      'I competed in a portfolio allocation challenge, aiming to maximize portfolio performance by strategically allocating funds across a range of investment strategies.'
+    description: "Contributed to finmarketpy (a Python backtesting library) and findatapy (a market data download library), writing unit tests for the backtestengine.",
+    techs: "Python, finmarketpy, findatapy",
   },
   {
-    id: 13,
-    name: 'IC Hack 2025',
+    id: 11,
+    name: "Algothon 2024",
+    imageSrc: Algothon,
+    description: "Competed in a portfolio allocation challenge, maximising performance by strategically allocating funds across a range of investment strategies.",
+    techs: "Python, NumPy, Pandas",
+  },
+  {
+    id: 12,
+    name: "IC Hack 2025",
     imageSrc: ICHack2025,
-    description:
-      'At IC Hack 2025, I participated in Optivers market making challenge, developing an algorithmic trading system that traded semiconductor stocks and ETFs across US and EU markets. I built automated strategies to capitalize on price differences between exchanges, implemented market making logic, and managed complex risk parameters while staying within strict position and trading frequency limits.'
-  }
+    description: "Participated in Optiver's market making challenge, building an algorithmic trading system for semiconductor stocks and ETFs across US and EU markets. Implemented automated arbitrage strategies, market making logic, and risk parameter management.",
+    techs: "Python, NumPy, Pandas, Optibook API",
+  },
 ];
 
 export const SocialLinks = [
   {
     id: 1,
-    iconSrc: <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />,
+    iconSrc: <IoLogoGithub className="text-textPrimary text-3xl cursor-pointer" />,
     name: "GitHub",
     link: "https://github.com/Osireg17",
   },
-
   {
-    id: 1,
+    id: 2,
     iconSrc: (
-      <IoLogoLinkedin className="text-blue-800 text-3xl cursor-pointer" />
+      <IoLogoLinkedin className="text-accent text-3xl cursor-pointer" />
     ),
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/osiobomighie/",
   },
-
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// {
-//   id: 1,
-//   name: "Cash Cow",
-//   imageSrc: img1,
-//   techs: "Javascript, React, Geeko API",
-//   description: "A web application that allows users to keep track of various cryptocurrencies and their prices. The application uses the Geeko API to fetch the latest prices of the cryptocurrencies and then displays them in a table.",
-//   github: "https://github.com/Osireg17/CashCow",
-// },
-// {
-//   id: 2,
-//   name: "Naruto Notions",
-//   imageSrc: img2,
-//   description: "full stack web application that allows users to create and share their own Naruto fan theories. The application uses the MERN stack and is hosted on Heroku.",
-//   techs: "Javascript, Node.js, Express, MongoDB, Bootstrap",
-//   github: "https://github.com/Osireg17/Naruto-Notions",
-// },
-// {
-//   id: 3,
-//   name: "Robotic Arm",
-//   imageSrc: img3,
-//   description: "Group project that involved the design and development of a robotic arm that can be controlled using a joystick. The arm was able to move in 6 different directions and was able to pick up and drop objects. ",
-//   techs: "Arduino, C++, 3D Printing",
-//   github: "https://github.com/Osireg17/ES2C6-Robotic-Arm-Project",
-// },
-// {
-//   id: 4,
-//   name: "Vivy Fluorite Eye's Song",
-//   imageSrc: img4,
-//   description: "A chatbot that is based off the anime Vivy: Fluorite Eye's Song. The chatbot is able to answer questions about the anime and also has a personality that is based off the character Vivy.",
-//   techs: "Python, Flask, Tensorflow, Pytorch, Bootstrap",
-//   github: "https://github.com/Osireg17/AI-Chatbot",
-// },
-// {
-//   id: 5,
-//   name: "NBA Face Smash",
-//   imageSrc: img5,
-//   description: "OpenCV project that estimates how much you look like a NBA player. The application uses OpenCV to detect the user's face and then uses a pre-trained model to estimate how much the user looks like the NBA player.",
-//   techs: "Python, OpenCV",
-//   github: "https://github.com/Osireg17/Facial-Recognition",
-// },
-// {
-//   id: 9,
-//   name: "Halo Pharmacy",
-//   imageSrc: img12,
-//   description: "A webapp that allows for patients to be able to find out more about the new pharmacy as well as nominate the pharmacy to be their permanent pharmacy.",
-//   techs: "NextJs, Typescript, AWS API Gateway, AWS Lambda, AWS SES, AWS Dynamo DB",
-//   github: "https://github.com/Osireg17/halo-pharmacy",
-// },
-// {
-//   id: 15,
-//   name: "Prescription Reminder App",
-//   imageSrc: "",
-//   description: "A very basic web application that allows my fathers pharmacies to be able to send mass sms messages to their customers to come and pick up their prescriptions. The application uses the Webex API to send sms messages to the customers. Going to expand on this project in the future to include more features that benefit my fathers pharmacy.",
-//   techs: "Nextjs, Flask",
-//   github: "https://github.com/Osireg17/Automate_Text_Frontend"
-// }

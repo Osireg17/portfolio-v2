@@ -3,126 +3,118 @@ import Spline from '@splinetool/react-spline';
 import pdf from './CV/Osiregbemhe_Obomighie_US_Grad copy.pdf'
 import { IoMenu, IoLogoGithub } from 'react-icons/io5'
 import { RxCrossCircled } from 'react-icons/rx'
-import { Experience, Projects, SocialLinks, Hackathons } from "./data";
+import { Experience, Projects, SocialLinks, Hackathons, Skills } from "./data";
 import { AnimatePresence, motion } from "framer-motion";
-import profile from './images/profile.jpg'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import "react-vertical-timeline-component/style.min.css";
 import ReadMore from './ReadMore';
 import Typewriter from 'typewriter-effect';
 
+const SectionHeading = ({ children }: { children: React.ReactNode }) => (
+  <div className="flex items-center gap-4 mb-12 w-full">
+    <h2 className="text-sm font-semibold tracking-widest uppercase text-accent whitespace-nowrap">
+      {children}
+    </h2>
+    <div className="flex-1 h-px bg-border" />
+  </div>
+);
 
+const CompanyBadge = ({ initials, color }: { initials: string; color: string }) => (
+  <div
+    className="w-8 h-8 rounded-md flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
+    style={{ backgroundColor: color }}
+  >
+    {initials}
+  </div>
+);
+
+const ProjectPlaceholder = ({ label }: { label: string }) => (
+  <div className="w-full h-[160px] rounded-md my-4 bg-surface border border-border flex items-center justify-center">
+    <span className="text-sm text-textSecondary font-mono">{label}</span>
+  </div>
+);
 
 function App() {
+  const [isActive, setIsActive] = useState(false);
+  const [projectExpanded, setProjectExpanded] = useState(new Array(Projects.length).fill(false));
+  const [hackathonExpanded, setHackathonExpanded] = useState(new Array(Hackathons.length).fill(false));
 
-  const [isActive, setIsActive] = useState(false)
-  const [expandedStates, setExpandedStates] = useState(new Array(Projects.length).fill(false));
-
-  const handleToggleExpansion = (index: number) => {
-    const newStates = [...expandedStates];
-    newStates[index] = !newStates[index];
-    setExpandedStates(newStates);
-  };
+  const navLinks = [
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#experience", label: "Experience" },
+    { href: "#projects", label: "Projects" },
+    { href: "#hackathons", label: "Hackathons" },
+    { href: "#contacts", label: "Contact" },
+  ];
 
   return (
     <AnimatePresence initial={false}>
       <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
-        <nav className="w-full px-6 z-50  fixed inset-x-0 top-2 flex justify-center items-center ">
-          <div className=" w-full md:w-880 bg-navBar p-4 rounded-2xl flex items-center">
-            <p className="text-2xl text-slate-200 font-medium">Osi Obomighie</p>
+
+        {/* Nav */}
+        <nav className="w-full px-6 z-50 fixed inset-x-0 top-2 flex justify-center items-center">
+          <div className="w-full md:w-880 bg-navBar border border-border p-4 rounded-2xl flex items-center">
+            <p className="text-base text-textPrimary font-semibold tracking-tight">Osi Obomighie</p>
 
             <div className="hidden md:flex items-center gap-6 ml-6 flex-1">
-              <a
-                href="#home"
-                className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-              >
-                About
-              </a>
-              <a href="#experience" className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in">Experience</a>
-              <a
-                href="#projects"
-                className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-              >
-                Projects
-              </a>
-              <a href="#hackathons" className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in">Hackathons</a>
-              <a
-                href="#contacts"
-                className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-              >
-                Contact
-              </a>
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-textBase font-medium hover:text-textPrimary cursor-pointer duration-150 ease-in"
+                >
+                  {link.label}
+                </a>
+              ))}
               <a
                 href={pdf}
                 target="_blank"
-                rel='noreferrer'
-                className="ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in"
+                rel="noreferrer"
+                className="ml-auto text-sm text-textBase font-medium hover:text-textPrimary cursor-pointer border border-border px-3 py-1.5 rounded-lg hover:border-textSecondary duration-150 ease-in"
               >
-                Download CV
+                CV
               </a>
             </div>
 
             <motion.div
               whileTap={{ scale: 0.6 }}
-              className="block md:hidden  ml-auto cursor-pointer"
+              className="block md:hidden ml-auto cursor-pointer"
               onClick={() => setIsActive(!isActive)}
             >
-              <IoMenu className="text-2xl text-textBase " />
+              <IoMenu className="text-2xl text-textBase" />
             </motion.div>
+
             {isActive && (
               <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1.1 }}
-                exit={{ opacity: 0, scale: 0.5 }}
-                transition={{ delay: 0.1, type: "spring" }}
-                className="p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex flex-col items-center justify-evenly gap-6"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.15, type: "tween" }}
+                className="p-6 w-56 bg-navBar border border-border rounded-xl fixed top-20 right-6 flex flex-col items-start gap-5"
               >
-                <a
-                  href="#home"
-                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-                  onClick={() => setIsActive(false)}
-                >
-                  Home
-                </a>
-                <a
-                  href="#about"
-                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-                  onClick={() => setIsActive(false)}
-                >
-                  About
-                </a>
-                <a href="#experience" className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in" onClick={() => setIsActive(false)}>Experience</a>
-                <a
-                  href="#projects"
-                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-                  onClick={() => setIsActive(false)}
-                >
-                  Projects
-                </a>
-                <a href="#hackathons" className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in" onClick={() => setIsActive(false)}>Hackathons</a>
-
-                <a href="#contacts" className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in" onClick={() => setIsActive(false)}>
-                  Contact
-                </a>
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm text-textBase font-medium hover:text-textPrimary cursor-pointer duration-150 ease-in"
+                    onClick={() => setIsActive(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
                 <a
                   href={pdf}
                   target="_blank"
-                  rel='noreferrer'
-                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in"
+                  rel="noreferrer"
+                  className="text-sm text-textBase font-medium hover:text-textPrimary cursor-pointer border border-border px-3 py-1.5 rounded-lg hover:border-textSecondary duration-150 ease-in"
                   onClick={() => setIsActive(false)}
                 >
-                  Download
+                  CV
                 </a>
-                {/* create a button that closes the pop up */}
-                <div className="absolute top-2 right-2 cursor-pointer">
+                <div className="absolute top-3 right-3 cursor-pointer">
                   <RxCrossCircled
-                    className="text-2xl text-textBase"
+                    className="text-xl text-textBase hover:text-textPrimary"
                     onClick={() => setIsActive(false)}
                   />
                 </div>
@@ -131,199 +123,236 @@ function App() {
           </div>
         </nav>
 
+        {/* Hero */}
         <div className="w-screen h-screen flex flex-col items-center justify-center relative" id="home">
           <Spline scene="https://prod.spline.design/V8fVYCI-HhjhVe6E/scene.splinecode" />
-
-          {/* <Spline scene="https://prod.spline.design/8CNI2WaiKU8c-jxH/scene.splinecode" /> */}
-          {/* <Spline scene="https://prod.spline.design/V8fVYCI-HhjhVe6E/scene.splinecode" /> */}
           <div className="absolute bottom-10 w-full flex justify-center items-center">
-            <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl ">
-              <p className="text-white">Press and drag to orbit</p>
+            <div className="p-3 px-5 flex items-center justify-center bg-surface border border-border rounded-2xl">
+              <p className="text-sm text-textSecondary">Press and drag to orbit</p>
             </div>
           </div>
         </div>
 
-        <main className="w-[80%] mt-4">
-          <div className="flex flex-col items-center justify-center mb-3">
-            <h1 className="text-5xl font-bold text-center text-slate-200">
-              {/* Hi 👋 , I'm Osi Obomighie */}
-              <Typewriter options={{
-                strings: ['Hi 👋 , I\'m Osi Obomighie', 'Aspiring Software Engineer', 'Basketball Enthusiast', 'Anime Fan'],
-                autoStart: true,
-                loop: true,
-              }}
+        <main className="w-[85%] max-w-5xl mt-4">
+
+          {/* Intro */}
+          <div className="flex flex-col items-center justify-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-center text-textPrimary leading-tight">
+              <Typewriter
+                options={{
+                  strings: ["Hi, I'm Osi Obomighie", "Backend Software Engineer", "Basketball Enthusiast"],
+                  autoStart: true,
+                  loop: true,
+                }}
               />
             </h1>
           </div>
-          <section
-            className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-24"
-            id="about"
-          >
-            <div className="w-full h-420 flex items-center justify-center">
-              <div className="w-275 h-340 relative bg-emerald-200 rounded-md mb-20">
-                <img
-                  src={profile}
-                  alt=""
-                  className="w-full h-full absolute -right-4 top-4 object-cover rounded-lg drop-shadow-2xl"
-                />
+
+          {/* About */}
+          <section className="w-full my-24" id="about">
+            <SectionHeading>About</SectionHeading>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+              {/* Skills grid */}
+              <div className="flex flex-col gap-6">
+                <div>
+                  <p className="text-xs font-semibold tracking-widest uppercase text-textSecondary mb-3">Languages</p>
+                  <div className="flex flex-wrap gap-2">
+                    {Skills.languages.map((lang) => (
+                      <span
+                        key={lang}
+                        className="text-sm text-textPrimary bg-surface border border-border px-3 py-1 rounded-md font-mono"
+                      >
+                        {lang}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold tracking-widest uppercase text-textSecondary mb-3">Technologies</p>
+                  <div className="flex flex-wrap gap-2">
+                    {Skills.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-sm text-textPrimary bg-surface border border-border px-3 py-1 rounded-md font-mono"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="w-full h-420 flex flex-col items-center justify-center mt-5">
-              <p className="text-lg text-textBase text-center">
-                I am a driven software engineer with a robust academic background at Warwick University, passionately engaging in technology and team-driven environments.
-              </p>
-              <p className="text-lg text-textBase text-center">
-                My experience at Hewlett-Packard Enterprise, JP Morgan, Lloyds Banking, and Ford Motors reflects a strong commitment to excellence in software development.
-              </p>
-              <p className="text-lg text-textBase text-center">
-                Adept in a wide range of programming languages, I also excel in mentoring and sharing knowledge, focusing on fostering teamwork and leadership skills
-              </p>
-              <p className="text-lg text-textBase text-center">
-                Actively participating in hackathons, I embrace challenges and competitive scenarios, mirroring my enthusiasm for basketball.
-              </p>
-              <p className="text-lg text-textBase text-center">
-                Eager to explore new opportunities and contribute to community-oriented initiatives.
-              </p>
+
+              {/* Bio */}
+              <div className="flex flex-col gap-4 justify-center">
+                <p className="text-base text-textSecondary leading-relaxed">
+                  I'm a software engineer at HubSpot working on backend infrastructure — distributed systems, data migrations at scale, and AI-powered features.
+                </p>
+                <p className="text-base text-textSecondary leading-relaxed">
+                  I studied Systems Engineering at the University of Warwick and have worked across companies including Morgan Stanley, Hewlett Packard Enterprise, and Ford Motor Company.
+                </p>
+                <p className="text-base text-textSecondary leading-relaxed">
+                  Outside of work I play basketball competitively, enjoy reading, and build side projects — often at the intersection of AI and backend engineering.
+                </p>
+              </div>
             </div>
           </section>
 
-
-          <section id="experience" className="w-full flex items-center justify-center">
-            <VerticalTimeline>
-              {Experience &&
-                Experience.map((n) => (
-                  <VerticalTimelineElement
-                    key={n.id}
-                    className="vertical-timeline-element--work"
-                    contentStyle={{
-                      background: "rgb(21, 24, 31)",
-                      color: "#888",
-                    }}
-                    contentArrowStyle={{
-                      borderRight: "7px solid  rgb(21, 24, 31)",
-                    }}
-                    date={n.date}
-                    iconStyle={{ background: "rgb(21, 24, 31)", color: "#888" }}
-                    icon={n.iconsSrc}
-                  >
-                    <h2 className="vertical-timeline-element-title">
-                      {n.company}
-                    </h2>
-                    <h3 className="vertical-timeline-element-title">
-                      {n.title}
-                    </h3>
-                    <h4 className="vertical-timeline-element-subtitle">
-                      {n.location}
-                    </h4>
-                    <p>{n.description}</p>
-                  </VerticalTimelineElement>
-                ))}
+          {/* Experience */}
+          <section id="experience" className="w-full my-24">
+            <SectionHeading>Experience</SectionHeading>
+            <VerticalTimeline layout="1-column-left" lineColor="#30363d">
+              {Experience.map((n) => (
+                <VerticalTimelineElement
+                  key={n.id}
+                  className="vertical-timeline-element--work"
+                  contentStyle={{
+                    background: "#161b22",
+                    color: "#e6edf3",
+                    border: "1px solid #30363d",
+                    borderRadius: "12px",
+                    boxShadow: "none",
+                    padding: "20px 24px",
+                  }}
+                  contentArrowStyle={{
+                    borderRight: "7px solid #30363d",
+                  }}
+                  date={n.date}
+                  dateClassName="text-textSecondary text-sm"
+                  iconStyle={{
+                    background: "#161b22",
+                    border: "2px solid #30363d",
+                    boxShadow: "none",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                  icon={<CompanyBadge initials={n.badge} color={n.badgeColor} />}
+                >
+                  <div className="flex flex-col gap-1 mb-3">
+                    <h2 className="text-base font-semibold text-textPrimary m-0">{n.company}</h2>
+                    <h3 className="text-sm font-medium text-accent m-0">{n.title}</h3>
+                    <h4 className="text-xs text-textSecondary m-0">{n.location}</h4>
+                  </div>
+                  <ul className="flex flex-col gap-2 m-0 pl-4 list-disc">
+                    {n.bullets.map((bullet, i) => (
+                      <li key={i} className="text-sm text-textSecondary leading-relaxed">
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </VerticalTimelineElement>
+              ))}
             </VerticalTimeline>
           </section>
 
-          <section
-            className="flex flex-wrap items-center justify-evenly my-24 gap-2"
-            id="projects"
-          >
-            {Projects &&
-              Projects.map((n, i) => (
+          {/* Projects */}
+          <section className="w-full my-24" id="projects">
+            <SectionHeading>Projects</SectionHeading>
+            <div className="flex flex-wrap gap-4 justify-start">
+              {Projects.map((n, i) => (
                 <motion.div
                   key={n.id}
-                  className={`border border-zinc-800 rounded-md p-2 min-w-[300px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out w-[300px] ${expandedStates[i] ? 'h-auto' : 'h-[450px]'} flex flex-col`}
+                  className={`border border-border rounded-xl p-4 w-full sm:w-[300px] hover:border-textSecondary duration-150 ease-in-out flex flex-col ${projectExpanded[i] ? 'h-auto' : 'h-[420px]'}`}
+                  style={{ background: "#161b22" }}
                 >
-                  <p className="text-lg text-textBase font-medium uppercase">
-                    {n.name.length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
+                  <p className="text-sm font-semibold text-textPrimary uppercase tracking-wide mb-1">
+                    {n.name.length > 28 ? `${n.name.slice(0, 28)}...` : n.name}
                   </p>
 
-                  <img
-                    src={n.imageSrc}
-                    className="w-auto h-[200px] object-cover rounded-md my-4"
-                    alt=""
-                  />
-                  <p className="text-lg text-textBase">
-                    <ReadMore onToggle={() => handleToggleExpansion(i)}>
+                  {n.imageSrc ? (
+                    <img
+                      src={n.imageSrc}
+                      className="w-full h-[160px] object-cover rounded-md my-3"
+                      alt={n.name}
+                    />
+                  ) : (
+                    <ProjectPlaceholder label={n.placeholderLabel ?? n.name} />
+                  )}
+
+                  <p className="text-sm text-textSecondary leading-relaxed flex-1">
+                    <ReadMore onToggle={() => {
+                      const next = [...projectExpanded];
+                      next[i] = !next[i];
+                      setProjectExpanded(next);
+                    }}>
                       {n.description}
                     </ReadMore>
                   </p>
-                  <div className="flex flex-1 items-center justify-between">
-                    <p className="text-lg text-gray-300">
-                      Technologies
-                      <span className="block text-sm text-gray-500">
-                        {n.techs}
-                      </span>
+
+                  <div className="flex items-end justify-between mt-3 pt-3 border-t border-border">
+                    <p className="text-xs text-textSecondary font-mono leading-relaxed max-w-[220px]">
+                      {n.techs}
                     </p>
-                    <a href={n.github}>
-                      <motion.div whileTap={{ scale: 0.5 }}>
-                        <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />
+                    <a href={n.github} target="_blank" rel="noreferrer">
+                      <motion.div whileTap={{ scale: 0.7 }}>
+                        <IoLogoGithub className="text-textSecondary text-xl cursor-pointer hover:text-textPrimary duration-150" />
                       </motion.div>
                     </a>
                   </div>
                 </motion.div>
               ))}
-          </section>
-
-
-          <section id='hackathons' className="flex flex-col items-center justify-evenly w-full my-24">
-            <p className="text-2xl text-gray-400 capitalize">Hackathons</p>
-            <div className="flex flex-wrap items-center justify-evenly w-full my-4 gap-4">
-              {Hackathons &&
-                Hackathons.map((n, i) => (
-                  <motion.div
-                    key={n.id}
-                    className={`border border-zinc-800 rounded-md p-2 min-w-[300px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out w-[300px] ${expandedStates[i] ? 'h-auto' : 'h-[450px]'} flex flex-col`}
-                  >
-                    <p className="text-lg text-textBase font-medium uppercase">
-                      {n.name.length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
-                    </p>
-
-                    <img
-                      src={n.imageSrc}
-                      className="w-auto h-[200px] object-cover rounded-md my-4"
-                      alt=""
-                    />
-                    <p className="text-lg text-textBase">
-                      <ReadMore onToggle={() => handleToggleExpansion(i)}>
-                        {n.description}
-                      </ReadMore>
-                    </p>
-
-                    <div className="flex flex-1 items-center justify-between">
-                      <p className="text-lg text-gray-300">
-                        Technologies
-                        <span className="block text-sm text-gray-500">
-                          {n.techs}
-                        </span>
-                      </p>
-                      {/* <a href={n.github}>
-                        <motion.div whileTap={{ scale: 0.5 }}>
-                          <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />
-                        </motion.div>
-                      </a> */}
-                    </div>
-                  </motion.div>
-                ))}
             </div>
           </section>
 
-          <section
-            id="contacts"
-            className="flex flex-col items-center justify-evenly w-full my-24"
-          >
-            <p className="text-2xl text-gray-400 capitalize">Social Links</p>
-            <div className="flex items-center justify-evenly w-full my-4 flex-wrap gap-4">
-              {SocialLinks &&
-                SocialLinks.map((n) => (
-                  <motion.a
-                    whileTap={{ scale: 0.8 }}
-                    href={n.link}
-                    key={n.id}
-                    className="w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3"
-                    target='_blank'
-                  >
-                    {n.iconSrc}
-                    <p className="text-lg text-textBase">{n.name}</p>
-                  </motion.a>
-                ))}
+          {/* Hackathons */}
+          <section id="hackathons" className="w-full my-24">
+            <SectionHeading>Hackathons</SectionHeading>
+            <div className="flex flex-wrap gap-4 justify-start">
+              {Hackathons.map((n, i) => (
+                <motion.div
+                  key={n.id}
+                  className={`border border-border rounded-xl p-4 w-full sm:w-[300px] hover:border-textSecondary duration-150 ease-in-out flex flex-col ${hackathonExpanded[i] ? 'h-auto' : 'h-[380px]'}`}
+                  style={{ background: "#161b22" }}
+                >
+                  <p className="text-sm font-semibold text-textPrimary uppercase tracking-wide mb-1">
+                    {n.name.length > 28 ? `${n.name.slice(0, 28)}...` : n.name}
+                  </p>
+
+                  <img
+                    src={n.imageSrc}
+                    className="w-full h-[140px] object-cover rounded-md my-3"
+                    alt={n.name}
+                  />
+
+                  <p className="text-sm text-textSecondary leading-relaxed flex-1">
+                    <ReadMore onToggle={() => {
+                      const next = [...hackathonExpanded];
+                      next[i] = !next[i];
+                      setHackathonExpanded(next);
+                    }}>
+                      {n.description}
+                    </ReadMore>
+                  </p>
+
+                  <div className="mt-3 pt-3 border-t border-border">
+                    <p className="text-xs text-textSecondary font-mono leading-relaxed">
+                      {n.techs}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </section>
+
+          {/* Contact */}
+          <section id="contacts" className="w-full my-24">
+            <SectionHeading>Contact</SectionHeading>
+            <div className="flex items-center gap-4 flex-wrap">
+              {SocialLinks.map((n) => (
+                <motion.a
+                  whileTap={{ scale: 0.95 }}
+                  href={n.link}
+                  key={n.id}
+                  className="px-6 py-4 border border-border rounded-xl hover:border-textSecondary duration-150 ease-in-out cursor-pointer flex items-center gap-3"
+                  style={{ background: "#161b22" }}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {n.iconSrc}
+                  <p className="text-sm text-textSecondary font-medium">{n.name}</p>
+                </motion.a>
+              ))}
             </div>
           </section>
 
